@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     
     'accounts.apps.AccountsConfig',
     'generals.apps.GeneralsConfig',
+    'qr.apps.QrConfig',
 ]
 
 MIDDLEWARE = [
