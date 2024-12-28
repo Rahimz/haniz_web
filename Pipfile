@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = ">=5.1"
+django-rosetta = "*"
+django-simple-history = "*"
+pillow = "*"
+psycopg2-binary = "*"
+gunicorn = "*"
+uvicorn = "*"
+django-taggit = "*"
+django-phonenumber-field = "*"
+django-phonenumbers = "*"
+weasyprint = "*"
+openpyxl = "*"
+django-countries = "*"
+django-cleanup = "*"
+celery = "*"
+pandas = "*"
+markdown = "*"
+
+[dev-packages]
+django-debug-toolbar = "*"
+
+[requires]
+python_version = "3.12"
