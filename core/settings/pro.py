@@ -19,3 +19,8 @@ DATABASES = {
         'PORT': DB_PORT,
     }
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://hanizstudio.com',
+    'https://www.hanizstudio.com',
+]
