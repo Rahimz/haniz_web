@@ -1,0 +1,23 @@
+$fonts: "fonts/now/Now-";
+// @font-face {font-family: "now-100";    src: url($fonts + "Thin.woff2") format("woff2");}
+// @font-face {font-family: "now-200";    src: url($fonts + "Light.woff2") format("woff2");}
+@font-face {font-family: "now-400";    src: url($fonts + "Regular.woff2") format("woff2");}
+// @font-face {font-family: "now-500";    src: url($fonts + "Medium.woff2") format("woff2");}
+// @font-face {font-family: "now-700";    src: url($fonts + "Bold.woff2") format("woff2");}      
+// @font-face {font-family: "now-900";    src: url($fonts + "Black.woff2") format("woff2");}
+
+$f-now: "now-400";
+$f-inter: "Inter", serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+$orange: #E87C12;
+$dark: #3D3D3D;
+
+$navc: #565E6C;
+$footerc: #E9E5D9;
+
+ 
+
+$WW: 1176px;

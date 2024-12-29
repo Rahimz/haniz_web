@@ -1,0 +1,74 @@
+footer {
+    display: flex; flex-direction: column; justify-content: space-between;
+    width: 100%;
+    padding: 100px 132px 30px 132px;
+    background-color: #1D2128;
+
+    .footer-top {
+        p {
+            width: 55%;
+            font-size: 20px;
+            font-weight: 400; // line-height: 28px;
+            color: $footerc;
+        }
+    }
+    .footer-down {
+        display: flex; flex-direction: column;
+
+        .fd-nav, .db-bot {width: 100%;}
+        
+        .fd-nav {
+            display: flex; justify-content: space-between;
+            padding: 40px 0 20px;
+            border-bottom: 1px solid white;
+
+            .fd-left {
+                display: flex; align-items: baseline;
+                width: 420px;
+                color: $orange;
+
+                h1 {
+                    font-size: 32px; // line-height: 48px;
+                    margin-right: 10px;
+                }
+                span {
+                    font-size: 15px; // line-height: 48px;
+                }
+            }
+
+            .fd-right {
+                display: flex; align-items: center;
+                a {
+                    font-family: "Inter", serif;
+                    font-size: 18px;
+                    font-weight: 400; // line-height: 28px;
+                    color: $orange;
+                    margin-left: 40px;
+                    &:hover {color: $footerc;}
+                }
+            }
+        }
+        .fd-bot {
+            display: flex; justify-content: space-between;
+            padding: 25px 0 0;
+            
+            a.f-lang {
+                display: flex; justify-content: space-between; align-items: center;
+                padding: 7px 10px;
+                border: 1px solid $footerc;
+                border-radius: 8px;
+
+                font-family: "Inter", serif;
+                font-size: 14px;
+                font-weight: 400; // line-height: 22px;
+                color: $footerc;
+                img {width: 16px; margin-left: 30px;}
+            }
+            .socials a {
+                margin-left: 20px;
+                color: $orange;
+                img {width: 24px;}
+            }
+        }
+    }
+}

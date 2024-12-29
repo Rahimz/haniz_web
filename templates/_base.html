@@ -2,13 +2,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% trans "Haniz Sudio" %} {% block title %}{% endblock title %}</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+    <title>{% trans "Haniz Sudio" %} {% block title %}{% endblock title %}</title>	
+	<link rel="stylesheet" href="{% static 'style.css' %}" />
 </head>
 <body>
-    {% block content %}
+	<header>
+		<div class="header-left">
+			<div class="logo">Haniz Studio</div>
+			<nav>
+				<a href="#" class="active">Home</a>
+				<a href="#">About Us</a>
+				<a href="#">Our Team</a>
+				<a href="#">Our Projects</a>
+				<a href="#">Contact Us</a>
+			</nav>
+		</div>
+		<div class="header-right">
+			<a href="#" class="h-lang">
+				English
+				<img src="{% static 'assets/down.png' %}" alt="">
+			</a>
+			<a href="#" class="h-contact">
+				<img src="{% static 'assets/contact.png' %}" alt="">
+				Get in Touch
+			</a>
+		</div>
+	</header>
+
+
+	<main>
+        {% block content %}
       
-    {% endblock content %}
+        {% endblock content %}
+	</main>
+
+
+	<footer>
+		<div class="footer-top">
+			<p>
+				At Haniz Studio, we specialize in creating unique, immersive visit experiences by combining design, 
+				storytelling, branding, and engineering. Our multidisciplinary team transforms ideas 
+				into unforgettable journeys, crafting the Else in every project we take on.
+			</p>
+		</div>
+		<div class="footer-down">
+			<div class="fd-nav">
+				<div class="fd-left">
+					<h1>Haniz Studio</h1>
+					<span>Visitor Experience Design</span>
+				</div>
+				<div class="fd-right">
+					<a href="#">Home</a>
+					<a href="#">About Us</a>
+					<a href="#">Our team</a>
+					<a href="#">Our Projects</a>
+					<a href="#">Contact us</a>
+				</div>
+			</div>
+			<div class="fd-bot">
+				<a class="f-lang" href="#">
+					English
+					<img src="{% static 'assets/down.png' %}" alt="">
+				</a>
+				<div class="socials">
+					<a href="#">
+						<img src="{% static 'assets/s-twitter.png' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'assets/s-facebook.png' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'assets/s-linkedin.png' %}" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
