@@ -1,4 +1,5 @@
 {% extends "_base.html" %}
+{% load static %}
 
 {% block content %}
 <section class="hero">
@@ -22,12 +23,14 @@
 
 <section class="list">
   <div>
+    <i class="fas fa-circle"></i>
     <p>
       <span>Tailored for the audience: </span>
       every project is designed with visitors' perspectives at its core.
     </p>
   </div>
   <div>
+    <i class="fas fa-circle"></i>
     <p>
       <span>Our approach starts with "the Else": </span>
       Our solutions prioritize visitor interaction and creativity, 
@@ -35,12 +38,14 @@
     </p>
   </div>
   <div>
+    <i class="fas fa-circle"></i>
     <p>
       <span>End-to-end expertise: </span>
       from concept to execution, we handle every detail seamlessly.
     </p>
   </div>
   <div>
+    <i class="fas fa-circle"></i>
     <p>
       <span>Proven impact: </span>
       our work creates memorable connections and lasting impressions.
@@ -73,55 +78,60 @@
   <div class="projects-down">
     <div class="project-box">
       <div class="pb-left">
-        <h2>Iran Computer Museum</h2>
-        <p>
-          This flagship project goes beyond showcasing old tech. 
-          We created an interactive space where visitors engage with exhibits, 
-          experiencing the history of technology firsthand through hands-on interaction 
-          and immersion rather than static displays.
-        </p>
+        <div>
+          <h2>Iran Computer Museum</h2>
+          <p>
+            This flagship project goes beyond showcasing old tech. 
+            We created an interactive space where visitors engage with exhibits, 
+            experiencing the history of technology firsthand through hands-on interaction 
+            and immersion rather than static displays.
+          </p>
+        </div>
         <a href="#">see More</a>
       </div>
-      <div class="pb-right" style="background-image: url('temp/a.jpg');"></div>
+      <div class="pb-right" style="background-image: url('{% static 'temp/a.jpg' %}');"></div>
     </div>
     <div class="project-box">
       <div class="pb-left">
-        <h2>Iran Computer Museum</h2>
-        <p>
-          This flagship project goes beyond showcasing old tech. 
-          We created an interactive space where visitors engage with exhibits, 
-          experiencing the history of technology firsthand through hands-on interaction 
-          and immersion rather than static displays.
-        </p>
+        <div>
+          <h2>Halq; An Experience of the Sound</h2>
+          <p>
+            For a branding initiative, we designed an interactive sound art exhibition 
+            where visitors could explore and play sound stations, offering a dynamic 
+            and distinct way to learn about the history of sound in Iran.
+          </p>
+        </div>
         <a href="#">see More</a>
       </div>
-      <div class="pb-right" style="background-image: url('temp/a.jpg');"></div>
+      <div class="pb-right" style="background-image: url('{% static 'temp/a.jpg' %}');"></div>
     </div>
     <div class="project-box">
       <div class="pb-left">
-        <h2>Iran Computer Museum</h2>
-        <p>
-          This flagship project goes beyond showcasing old tech. 
-          We created an interactive space where visitors engage with exhibits, 
-          experiencing the history of technology firsthand through hands-on interaction 
-          and immersion rather than static displays.
-        </p>
+        <div>
+          <h2>Boom Restoration (Heritage Sailing Wooden Ship)</h2>
+          <p>
+            We redesigned and restored a historic sailing ship to preserve Iran’s maritime heritage. 
+            This transformation turned a world heritage asset into a unique tourism attraction, 
+            providing visitors with an immersive maritime experience.
+          </p>
+        </div>
         <a href="#">see More</a>
       </div>
-      <div class="pb-right" style="background-image: url('temp/a.jpg');"></div>
+      <div class="pb-right" style="background-image: url('{% static 'temp/a.jpg' %}');"></div>
     </div>
     <div class="project-box">
       <div class="pb-left">
-        <h2>Iran Computer Museum</h2>
-        <p>
-          This flagship project goes beyond showcasing old tech. 
-          We created an interactive space where visitors engage with exhibits, 
-          experiencing the history of technology firsthand through hands-on interaction 
-          and immersion rather than static displays.
-        </p>
+        <div>
+          <h2>Corporate Signage Project</h2>
+          <p>
+            We addressed navigation inefficiencies in a corporate environment by creating a functional, 
+            visitor-focused signage system. This improved employee experience 
+            and streamlined navigation within the company.
+          </p>
+        </div>
         <a href="#">see More</a>
       </div>
-      <div class="pb-right" style="background-image: url('temp/a.jpg');"></div>
+      <div class="pb-right" style="background-image: url('{% static 'temp/a.jpg' %}');"></div>
     </div>
   </div>
 </section>

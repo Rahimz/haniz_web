@@ -6,6 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
     <title>{% trans "Haniz Sudio" %} {% block title %}{% endblock title %}</title>	
+	
+	<!-- lorapupa@azuretechtalk.net   >>> pass:hanizstudio -->
+	<script src="https://kit.fontawesome.com/9f95ff1f17.js" crossorigin="anonymous"></script>
+
 	<link rel="stylesheet" href="{% static 'style.css' %}" />
 </head>
 <body>
@@ -23,10 +27,10 @@
 		<div class="header-right">
 			<a href="#" class="h-lang">
 				English
-				<img src="{% static 'assets/down.png' %}" alt="">
+				<i class="fas fa-chevron-down"></i>
 			</a>
 			<a href="#" class="h-contact">
-				<img src="{% static 'assets/contact.png' %}" alt="">
+				<i class="far fa-user"></i>
 				Get in Touch
 			</a>
 		</div>
@@ -65,21 +69,32 @@
 			<div class="fd-bot">
 				<a class="f-lang" href="#">
 					English
-					<img src="{% static 'assets/down.png' %}" alt="">
+					<i class="fas fa-chevron-down"></i>
 				</a>
 				<div class="socials">
 					<a href="#">
-						<img src="{% static 'assets/s-twitter.png' %}" alt="">
+						<i class="fab fa-twitter"></i>
 					</a>
 					<a href="#">
-						<img src="{% static 'assets/s-facebook.png' %}" alt="">
+						<i class="fab fa-facebook"></i>
 					</a>
 					<a href="#">
-						<img src="{% static 'assets/s-linkedin.png' %}" alt="">
+						<i class="fab fa-linkedin"></i>
 					</a>
 				</div>
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		// mobile menu
+		openMobNav = function() {
+			document.getElementById("mobile").style.height = "100%";
+			document.getElementById("mobile").style.opacity = "1";
+		}
+		closeMobNav = function() {
+			document.getElementById("mobile").style.height = "0";
+			document.getElementById("mobile").style.opacity = "0"}
+	</script>
 </body>
 </html>
