@@ -2,7 +2,7 @@
 @import "header";
 @import "footer";
 
-* {margin: 0; box-sizing: border-box; font-family: $f-now;}
+* {margin: 0; box-sizing: border-box; font-family: $f-now; scroll-margin-top: 55px;}
 a {transition: 0.3s; text-decoration: none;}
 
 section {
@@ -12,7 +12,7 @@ section {
 }
 
 
-section.hero {
+section#top {
     flex-direction: column; justify-content: end; align-items: start;
     height: 640px;
     margin-top: 56px;
@@ -44,9 +44,10 @@ section.hero {
     }
 }
 
-section.distinct {
+section#about {
     flex-direction: column; align-items: start;
     padding-right: 300px;
+    // background-color: blue;
 
     h1 {
         font-size: 56px; // line-height: 78px;
@@ -75,11 +76,11 @@ section.list {
     }
 }
 
-section.minds {
+section#team {
     justify-content: space-between; align-items: start;
     padding-top: 76px;
-    .minds-left, .minds-right {width: 42%;}
-    .minds-left {
+    .team-left, .team-right {width: 42%;}
+    .team-left {
         padding-top: 40px;
 
         h1 {
@@ -91,7 +92,7 @@ section.minds {
             font-size: 20px; // line-height: 30px;
         }
     }
-    .minds-right {
+    .team-right {
         background-color: $dark;
         height: 592px;
         border-top-left-radius: 20px;
@@ -99,7 +100,7 @@ section.minds {
     }
 }
 
-section.projects {
+section#projects {
     flex-direction: column;
     padding-bottom: 60px;
 
@@ -210,7 +211,7 @@ section.lets {
 
 @media screen and (max-width: 1024px) {
     
-    section.distinct {padding-right: 132px;}
+    section#about {padding-right: 132px;}
     
     section.list {
         flex-direction: column;
@@ -221,17 +222,17 @@ section.lets {
         }
     }
 
-    section.minds {
+    section#team {
         flex-direction: column; align-items: end;
         // padding: 30px 20px;
-        .minds-left {
+        .team-left {
             width: 100%;
             padding: 0 0 40px;
         }
-        .minds-right {width: 60%;}
+        .team-right {width: 60%;}
     }
 
-    section.projects { 
+    section#projects { 
         .projects-top {padding: 0;}
         .projects-down {
     
@@ -250,7 +251,7 @@ section.lets {
 @media screen and (max-width: 768px) {
     section {padding: 30px 20px;}
 
-    section.hero {
+    section#top {
         height: 420px;    
     
         h1 {
@@ -267,7 +268,7 @@ section.lets {
         }
     }
 
-    section.distinct {
+    section#about {
         padding: 30px 20px 50px 20px;
     
         h1 {
@@ -295,9 +296,9 @@ section.lets {
         }
     }
 
-    section.minds {
+    section#team {
         padding: 30px 20px;
-        .minds-left {
+        .team-left {
             padding: 0 0 20px;
     
             h1 {
@@ -308,14 +309,14 @@ section.lets {
                 font-size: 12px; // line-height: 20px;
             }
         }
-        .minds-right {
+        .team-right {
             height: 240px;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
     }
 
-    section.projects {
+    section#projects {
         padding-bottom: 10px;
     
         .projects-top {

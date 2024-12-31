@@ -37,6 +37,7 @@ header .header-left a, header .header-left nav a, header .header-right a {
   font-size: 14px;
 }
 header .header-left .logo {
+  color: #3D3D3D;
   margin-right: 40px;
   font-size: 28px;
 }
@@ -355,6 +356,7 @@ footer .footer-down .fd-bot .socials a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "now-400";
+  scroll-margin-top: 55px;
 }
 
 a {
@@ -371,7 +373,7 @@ section {
   padding: 115px 132px;
 }
 
-section.hero {
+section#top {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -387,18 +389,18 @@ section.hero {
   padding-right: 20%;
   background-color: #3D3D3D;
 }
-section.hero h1, section.hero p {
+section#top h1, section#top p {
   color: #E9E5D9;
 }
-section.hero h1 {
+section#top h1 {
   font-size: 64px;
   margin-bottom: 30px;
 }
-section.hero p {
+section#top p {
   font-size: 24px;
   margin-bottom: 20px;
 }
-section.hero button {
+section#top button {
   padding: 12px 20px;
   border-radius: 6px;
   background-color: #E87C12;
@@ -410,7 +412,7 @@ section.hero button {
   font-weight: 400;
 }
 
-section.distinct {
+section#about {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -420,12 +422,12 @@ section.distinct {
           align-items: start;
   padding-right: 300px;
 }
-section.distinct h1 {
+section#about h1 {
   font-size: 56px;
   color: #E87C12;
   margin-bottom: 30px;
 }
-section.distinct p {
+section#about p {
   width: 80%;
   font-size: 20px;
   color: #3D3D3D;
@@ -455,7 +457,7 @@ section.list div i {
   color: #3D3D3D;
 }
 
-section.minds {
+section#team {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -464,52 +466,52 @@ section.minds {
           align-items: start;
   padding-top: 76px;
 }
-section.minds .minds-left, section.minds .minds-right {
+section#team .team-left, section#team .team-right {
   width: 42%;
 }
-section.minds .minds-left {
+section#team .team-left {
   padding-top: 40px;
 }
-section.minds .minds-left h1 {
+section#team .team-left h1 {
   font-size: 40px;
   color: #E87C12;
   margin-bottom: 30px;
 }
-section.minds .minds-left p {
+section#team .team-left p {
   font-size: 20px;
 }
-section.minds .minds-right {
+section#team .team-right {
   background-color: #3D3D3D;
   height: 592px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-section.projects {
+section#projects {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 60px;
 }
-section.projects .projects-top {
+section#projects .projects-top {
   padding: 0 20%;
 }
-section.projects .projects-top h1, section.projects .projects-top p {
+section#projects .projects-top h1, section#projects .projects-top p {
   width: 100%;
   text-align: center;
 }
-section.projects .projects-top h1 {
+section#projects .projects-top h1 {
   font-size: 40px;
   color: #E87C12;
   margin-bottom: 30px;
 }
-section.projects .projects-top p {
+section#projects .projects-top p {
   font-family: "Inter", serif;
   font-size: 20px;
   font-weight: 400;
 }
-section.projects .projects-down {
+section#projects .projects-down {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,7 +522,7 @@ section.projects .projects-down {
           justify-content: space-between;
   margin-top: 100px;
 }
-section.projects .projects-down .project-box {
+section#projects .projects-down .project-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,10 +538,10 @@ section.projects .projects-down .project-box {
   border: 1px solid #ececec;
   border-radius: 8px;
 }
-section.projects .projects-down .project-box:nth-child(2n) {
+section#projects .projects-down .project-box:nth-child(2n) {
   margin-right: 0;
 }
-section.projects .projects-down .project-box .pb-left {
+section#projects .projects-down .project-box .pb-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,18 +557,18 @@ section.projects .projects-down .project-box .pb-left {
           align-items: start;
   width: 60%;
 }
-section.projects .projects-down .project-box .pb-left h2, section.projects .projects-down .project-box .pb-left p {
+section#projects .projects-down .project-box .pb-left h2, section#projects .projects-down .project-box .pb-left p {
   margin-bottom: 20px;
 }
-section.projects .projects-down .project-box .pb-left h2 {
+section#projects .projects-down .project-box .pb-left h2 {
   font-size: 20px;
   color: #171A1F;
 }
-section.projects .projects-down .project-box .pb-left p {
+section#projects .projects-down .project-box .pb-left p {
   font-size: 14px;
   color: #3D3D3D;
 }
-section.projects .projects-down .project-box .pb-left a {
+section#projects .projects-down .project-box .pb-left a {
   display: inline-block;
   padding: 7px 18px;
   border: 1px solid #E87C12;
@@ -576,11 +578,11 @@ section.projects .projects-down .project-box .pb-left a {
   font-size: 14px;
   font-weight: 400;
 }
-section.projects .projects-down .project-box .pb-left a:hover {
+section#projects .projects-down .project-box .pb-left a:hover {
   background-color: #E87C12;
   color: white;
 }
-section.projects .projects-down .project-box .pb-right {
+section#projects .projects-down .project-box .pb-right {
   width: 10vw;
   height: 13vw;
   background-color: #ccc;
@@ -631,7 +633,7 @@ section.lets div a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-  section.distinct {
+  section#about {
     padding-right: 132px;
   }
   section.list {
@@ -644,7 +646,7 @@ section.lets div a:hover {
     width: 90%;
     margin: 0 0 35px 25px;
   }
-  section.minds {
+  section#team {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -653,17 +655,17 @@ section.lets div a:hover {
         -ms-flex-align: end;
             align-items: end;
   }
-  section.minds .minds-left {
+  section#team .team-left {
     width: 100%;
     padding: 0 0 40px;
   }
-  section.minds .minds-right {
+  section#team .team-right {
     width: 60%;
   }
-  section.projects .projects-top {
+  section#projects .projects-top {
     padding: 0;
   }
-  section.projects .projects-down .project-box {
+  section#projects .projects-down .project-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -682,29 +684,29 @@ section.lets div a:hover {
   section {
     padding: 30px 20px;
   }
-  section.hero {
+  section#top {
     height: 420px;
   }
-  section.hero h1 {
+  section#top h1 {
     font-size: 32px;
     margin-bottom: 10px;
   }
-  section.hero p {
+  section#top p {
     font-size: 14px;
     margin-bottom: 15px;
   }
-  section.hero button {
+  section#top button {
     padding: 7px 15px;
     font-size: 14px;
   }
-  section.distinct {
+  section#about {
     padding: 30px 20px 50px 20px;
   }
-  section.distinct h1 {
+  section#about h1 {
     font-size: 20px;
     margin-bottom: 10px;
   }
-  section.distinct p {
+  section#about p {
     width: 100%;
     font-size: 14px;
   }
@@ -725,41 +727,41 @@ section.lets div a:hover {
     left: -25px;
     font-size: 12 px;
   }
-  section.minds {
+  section#team {
     padding: 30px 20px;
   }
-  section.minds .minds-left {
+  section#team .team-left {
     padding: 0 0 20px;
   }
-  section.minds .minds-left h1 {
+  section#team .team-left h1 {
     font-size: 20px;
     margin-bottom: 15px;
   }
-  section.minds .minds-left p {
+  section#team .team-left p {
     font-size: 12px;
   }
-  section.minds .minds-right {
+  section#team .team-right {
     height: 240px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
-  section.projects {
+  section#projects {
     padding-bottom: 10px;
   }
-  section.projects .projects-top h1 {
+  section#projects .projects-top h1 {
     font-size: 20px;
     margin-bottom: 10px;
   }
-  section.projects .projects-top p {
+  section#projects .projects-top p {
     font-size: 12px;
   }
-  section.projects .projects-down {
+  section#projects .projects-down {
     margin-top: 30px;
   }
-  section.projects .projects-down .project-box {
+  section#projects .projects-down .project-box {
     padding: 10px;
   }
-  section.projects .projects-down .project-box .pb-left {
+  section#projects .projects-down .project-box .pb-left {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -775,18 +777,18 @@ section.lets div a:hover {
             align-items: start;
     width: 60%;
   }
-  section.projects .projects-down .project-box .pb-left h2 {
+  section#projects .projects-down .project-box .pb-left h2 {
     margin-bottom: 10px;
     font-size: 14px;
   }
-  section.projects .projects-down .project-box .pb-left p {
+  section#projects .projects-down .project-box .pb-left p {
     margin-bottom: 0;
     font-size: 12px;
   }
-  section.projects .projects-down .project-box .pb-left a {
+  section#projects .projects-down .project-box .pb-left a {
     display: none;
   }
-  section.projects .projects-down .project-box .pb-right {
+  section#projects .projects-down .project-box .pb-right {
     width: 30vw;
     height: 35vw;
     background-color: #ccc;

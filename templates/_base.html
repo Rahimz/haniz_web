@@ -11,17 +11,22 @@
 	<script src="https://kit.fontawesome.com/9f95ff1f17.js" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" href="{% static 'style.css' %}" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 	<header>
 		<div class="header-left">
 			<div class="logo">Haniz Studio</div>
 			<nav>
-				<a href="#" class="active">Home</a>
-				<a href="#">About Us</a>
-				<a href="#">Our Team</a>
-				<a href="#">Our Projects</a>
-				<a href="#">Contact Us</a>
+				<a href="#top" class="active">Home</a>
+				<a href="#about">About Us</a>
+				<a href="#team">Our Team</a>
+				<a href="#projects">Our Projects</a>
+				<a href="#contact">Contact Us</a>
+
+				<!-- <i class="fas fa-bars"></i> -->
+				<img src="{% static 'temp/menu.png' %}" onclick="openMobNav()">
 			</nav>
 		</div>
 		<div class="header-right">
@@ -36,6 +41,16 @@
 		</div>
 	</header>
 
+	<div id="mobile">
+		<i class="fa-solid fa-x" onclick="closeMobNav()"></i>
+		<nav>
+			<a href="#top" class="active smooth" onclick="closeMobNav()">Home</a>
+			<a href="#about" class="smooth" onclick="closeMobNav()">About Us</a>
+			<a href="#team" class="smooth" onclick="closeMobNav()">Our Team</a>
+			<a href="#projects" class="smooth" onclick="closeMobNav()">Our Projects</a>
+			<a href="#contact" class="smooth" onclick="closeMobNav()">Contact Us</a>
+		</nav>
+	</div>
 
 	<main>
         {% block content %}
@@ -44,7 +59,7 @@
 	</main>
 
 
-	<footer>
+	<footer id="contact">
 		<div class="footer-top">
 			<p>
 				At Haniz Studio, we specialize in creating unique, immersive visit experiences by combining design, 
@@ -59,11 +74,11 @@
 					<span>Visitor Experience Design</span>
 				</div>
 				<div class="fd-right">
-					<a href="#">Home</a>
-					<a href="#">About Us</a>
-					<a href="#">Our team</a>
-					<a href="#">Our Projects</a>
-					<a href="#">Contact us</a>
+					<a href="#top" class="active">Home</a>
+					<a href="#about">About Us</a>
+					<a href="#team">Our Team</a>
+					<a href="#projects">Our Projects</a>
+					<a href="#contact">Contact Us</a>					
 				</div>
 			</div>
 			<div class="fd-bot">
