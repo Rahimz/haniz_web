@@ -13,6 +13,10 @@ class QrCode(TimeStampedModel):
         _("Slug"),
         allow_unicode=True,
     )
+    redirect = models.URLField(
+        null=True,
+        blank=True
+    )
     active = models.BooleanField(
         _("Active"),
         default=True
