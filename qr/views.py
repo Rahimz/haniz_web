@@ -10,8 +10,10 @@ def QrShowView(request, slug):
     qr = get_object_or_404(QrCode, slug=slug, active=True)
     if qr.redirect:
         return HttpResponseRedirect(qr.redirect)
+
+        
     context = dict(
-        page_title = _("QR"),
+        page_title = qr.name,
         qr=qr
     )
     return render(
