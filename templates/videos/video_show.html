@@ -7,7 +7,7 @@
 </head>
 <body>
     {% if video %}      
-    <video width="100%" height="auto" loop muted autoplay preload="auto">
+    <video width="100%" height="auto"  controls loop muted autoplay preload="auto">
         {#<source src="{% static src %}" type="video/mp4" id="video-main">#}
         <source src="{{ video.video_file.url }}" type="video/mp4" id="video-main">
         not supported
