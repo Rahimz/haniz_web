@@ -7,7 +7,7 @@ from qr.models import QrCode
 
 
 def QrShowView(request, slug):
-    qr = get_object_or_404(QrCode, slug=slug)
+    qr = get_object_or_404(QrCode, slug=slug, active=True)
     if qr.redirect:
         return HttpResponseRedirect(qr.redirect)
     context = dict(
