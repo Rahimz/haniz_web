@@ -7,7 +7,6 @@
 </head>
 <body>
   {% if qr.file %}
-{{ qr.file.url }}
 {#<embed src="{{ qr.file.url }}" type="application/pdf" width="100%" height="auto">#}
   <iframe src="{{ qr.file.url }}" width="100%" height="1024"></iframe>
 {% endif %}
