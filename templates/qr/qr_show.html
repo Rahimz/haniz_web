@@ -1,8 +1,21 @@
 {% extends "_base_simple.html" %}
 {% block title %}{{qr.name}}{% endblock title %}
 {% block content %}
+
 {% if qr.file %}
-  {#<embed src="{{ qr.file.url }}" type="application/pdf" width="100%" height="auto">#}
-  <iframe src="{{ qr.file.url }}" width="100%" height="1024"></iframe>
+{#<embed src="{{ qr.file.url }}" type="application/pdf" width="100%" height="auto">#}
+  {% comment %}
+  <p>File URL: {{ qr.file.url }}
+  </p>
+    <!-- this one works on android but does not work on ios -->
+    <iframe src="{{ qr.file.url }}" width="100%" height="1024"></iframe>      
+    <a href="{{ qr.file.url }}" target="_blank" download 
+    style="cursor: pointer; background-color: darkgray; color: white; padding: 10px 15px; border: 1px solid; border-radius: 3px; text-decoration: none; display: inline-block; text-align: center;"
+    >Download</a>
+    {% endcomment %}
+    {% for item in images %}
+    <img src="{{ item.image_file.url }}" alt="sounscape catalougue {{ item.rank }}" width="100%" height="auto">      
+    {% endfor %}
+
 {% endif %}    
 {% endblock content %}  

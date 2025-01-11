@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 
 
 from qr.models import QrCode
+from generals.models import Image
 
 
 def QrShowView(request, slug):
@@ -11,10 +12,14 @@ def QrShowView(request, slug):
     if qr.redirect:
         return HttpResponseRedirect(qr.redirect)
 
-        
+    images = None 
+    if qr.file:
+        # if it is catalougue
+        images = Image.objects.all()
     context = dict(
         page_title = qr.name,
-        qr=qr
+        qr=qr,
+        images=images
     )
     return render(
         request,
