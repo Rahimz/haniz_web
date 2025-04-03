@@ -1,14 +1,35 @@
 {% extends "_base_simple.html" %}
 
 {% block title %}{{ page_title }}{% endblock title %}
-
+{% block head %}
+  <style>
+    .mid-title {
+        border-bottom: solid 2px #901f21;        
+    }
+  </style>
+{% endblock head %}
 {% block content %}
-    {% if video %}      
-    <video width="100%" height="auto"  controls loop muted autoplay preload="auto">
-        {#<source src="{% static src %}" type="video/mp4" id="video-main">#}
-        <source src="{{ video.video_file.url }}" type="video/mp4" id="video-main">
-        not supported
-    </video>
-    {% endif %}     
+<div class="container text-center my-3">
+    <div class="row">
+        {% if video.fa_name %}
+        <h1 class="h1 mid-title">{{ video.fa_name }}</h1>
+        {% endif %}
+    </div>
+    <div class="row my-3">
+        {% if video.description %}
+        <p>{{ video.description | safe | linebreaksbr }}</p>
+        {% endif %}
+    </div>
+    <div class="row">
+        {% if video %}      
+        <video width="100%" height="auto"  controls loop muted autoplay preload="auto">
+            {#<source src="{% static src %}" type="video/mp4" id="video-main">#}
+            <source src="{{ video.video_file.url }}" type="video/mp4" id="video-main">
+            not supported
+        </video>
+        {% endif %}     
+    </div>
+    {% include "videos/_videos_footer.html" %}
+</div>
 {% endblock content %}  
 
