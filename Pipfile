@@ -14,7 +14,7 @@ uvicorn = "*"
 django-taggit = "*"
 django-phonenumber-field = "*"
 django-phonenumbers = "*"
-weasyprint = "*"
+
 openpyxl = "*"
 django-countries = "*"
 django-cleanup = "*"
