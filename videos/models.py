@@ -27,6 +27,12 @@ class Video(TimeStampedModel):
     video_file = models.FileField(
         upload_to='videos/'
     )
+    video_present = models.FileField(
+        upload_to='videos/',
+        null=True, 
+        blank=True
+    )
+    
     
     def __str__(self):
         return self.name

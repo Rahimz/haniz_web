@@ -21,10 +21,9 @@
         {% endif %}
     </div>
     <div class="row">
-        {% if video %}      
+        {% if video.video_present %}      
         <video width="100%" height="auto"  controls loop muted autoplay preload="auto">
-            {#<source src="{% static src %}" type="video/mp4" id="video-main">#}
-            <source src="{{ video.video_file.url }}" type="video/mp4" id="video-main">
+            <source src="{{ video.video_present.url }}" type="video/mp4" id="video-main">
             not supported
         </video>
         {% endif %}     
