@@ -8,8 +8,16 @@ class Video(TimeStampedModel):
         max_length = 100,
         unique=True
     )
+    fa_name = models.CharField(
+        max_length=150,
+        null=True,
+        blank=True
+    )
     slug = models.SlugField(
         allow_unicode=True
+    )
+    description = models.TextField(
+        blank=True
     )
     uuid = models.UUIDField(
         default=uuid.uuid4, 

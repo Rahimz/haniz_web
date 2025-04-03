@@ -17,6 +17,9 @@ class QrCode(TimeStampedModel):
         null=True,
         blank=True
     )
+    description = models.TextField(
+        blank=True
+    )
     file = models.FileField(
         upload_to='qr/files',
         null=True, 
