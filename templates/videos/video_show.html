@@ -24,6 +24,7 @@
         {% if video.video_present %}      
         <video width="100%" height="auto"  controls loop muted autoplay preload="auto">
             <source src="{{ video.video_present.url }}" type="video/mp4" id="video-main">
+            <source src="{{ video.video_present.url }}" type="video/mov" id="video-main">
             not supported
         </video>
         {% endif %}     
