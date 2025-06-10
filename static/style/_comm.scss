@@ -19,6 +19,14 @@ h6 {
     margin: 0;
 }
 
+h1 {
+    font: 600 38px Anjoman;
+}
+
+h3 {
+    font: 600 28px Anjoman;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -38,6 +46,51 @@ main {
 .wmain {
     width: $wmain;
     height: 100%;
-    margin: 0 auto;
     // background-color: rgba($color: red, $alpha: 0.3);
+}
+
+
+
+
+
+// ------------------------------ //
+.line {
+    position: absolute;
+
+    &.h-line {
+        border-top: 2px solid;
+    }
+
+    &.v-line {
+        border-left: 2px solid;
+    }
+
+    &.o-line {
+        border-color: $orange;
+    }
+
+    &.l-line {
+        border-color: $light;
+    }
+
+    &.d-line {
+        border-color: $dark;
+    }
+}
+
+.dot {
+    position: absolute;
+    border-radius: 50%;
+
+    &.o-dot {
+        background-color: $orange;
+    }
+
+    &.l-dot {
+        background-color: $light;
+    }
+
+    &.d-dot {
+        background-color: $dark;
+    }
 }

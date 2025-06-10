@@ -65,6 +65,14 @@ h6 {
   margin: 0;
 }
 
+h1 {
+  font: 600 38px Anjoman;
+}
+
+h3 {
+  font: 600 28px Anjoman;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -81,203 +89,43 @@ main {
 }
 
 .wmain {
-  width: 1273px;
+  width: 1273px !important;
   height: 100%;
-  margin: 0 auto;
 }
 
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  padding: 100px 132px 30px 132px;
-  background-color: #1D2128;
+.line {
+  position: absolute;
 }
-footer .footer-top p {
-  width: 55%;
-  font-size: 20px;
-  font-weight: 400;
-  color: #E9E5D9;
+.line.h-line {
+  border-top: 2px solid;
 }
-footer .footer-down {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.line.v-line {
+  border-left: 2px solid;
 }
-footer .footer-down .fd-nav,
-footer .footer-down .db-bot {
-  width: 100%;
+.line.o-line {
+  border-color: #E87C12;
 }
-footer .footer-down .fd-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 40px 0 20px;
-  border-bottom: 1px solid white;
+.line.l-line {
+  border-color: #E9E5D9;
 }
-footer .footer-down .fd-nav .fd-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  width: 420px;
-  color: #E87C12;
-}
-footer .footer-down .fd-nav .fd-left h1 {
-  font-size: 32px;
-  margin-right: 10px;
-}
-footer .footer-down .fd-nav .fd-left span {
-  font-size: 15px;
-}
-footer .footer-down .fd-nav .fd-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-footer .footer-down .fd-nav .fd-right a {
-  font-family: "Inter", serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: #E87C12;
-  margin-left: 40px;
-}
-footer .footer-down .fd-nav .fd-right a:hover {
-  color: #E9E5D9;
-}
-footer .footer-down .fd-bot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 25px 0 0;
-}
-footer .footer-down .fd-bot a.f-lang {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 7px 10px;
-  border: 1px solid #E9E5D9;
-  border-radius: 8px;
-  font-family: "Inter", serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #E9E5D9;
-}
-footer .footer-down .fd-bot a.f-lang i {
-  margin-left: 30px;
-}
-footer .footer-down .fd-bot .socials a {
-  margin-left: 20px;
-  color: #E87C12;
-  font-size: 20px;
-}
-footer .footer-down .fd-bot .socials a:hover {
-  color: #E9E5D9;
+.line.d-line {
+  border-color: #3D3D3D;
 }
 
-@media screen and (max-width: 1024px) {
-  footer .footer-top p {
-    width: 100%;
-  }
-  footer .footer-down .fd-nav {
-    padding: 40px 0 20px;
-    border-bottom: unset;
-  }
-  footer .footer-down .fd-nav .fd-left {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 100%;
-  }
-  footer .footer-down .fd-nav .fd-right {
-    display: none;
-  }
-  footer .footer-down .fd-bot {
-    padding: 0;
-  }
+.dot {
+  position: absolute;
+  border-radius: 50%;
 }
-@media screen and (max-width: 768px) {
-  footer {
-    padding: 50px 20px 10px 20px;
-  }
-  footer .footer-top p {
-    font-size: 12px;
-  }
-  footer .footer-down .fd-nav {
-    padding: 40px 0 20px;
-    border-bottom: unset;
-  }
-  footer .footer-down .fd-nav .fd-left h1 {
-    font-size: 32px;
-    margin-right: 10px;
-  }
-  footer .footer-down .fd-nav .fd-left span {
-    font-size: 15px;
-  }
-  footer .footer-down .fd-bot {
-    padding: 0 0 20px;
-  }
-  footer .footer-down .fd-bot a.f-lang {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 7px 10px;
-    border: 1px solid #E9E5D9;
-    border-radius: 8px;
-    font-family: "Inter", serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #E9E5D9;
-  }
-  footer .footer-down .fd-bot a.f-lang i {
-    margin-left: 30px;
-  }
-  footer .footer-down .fd-bot .socials a {
-    margin-left: 20px;
-    color: #E87C12;
-    font-size: 20px;
-  }
-  footer .footer-down .fd-bot .socials a:hover {
-    color: #E9E5D9;
-  }
+.dot.o-dot {
+  background-color: #E87C12;
 }
+.dot.l-dot {
+  background-color: #E9E5D9;
+}
+.dot.d-dot {
+  background-color: #3D3D3D;
+}
+
 section {
   position: relative;
   padding: 0;
@@ -300,6 +148,17 @@ section.hero .herofull {
   bottom: -212px;
   height: 498px;
 }
+section.hero .herofull .line {
+  top: 0px;
+  left: 30%;
+  width: 70%;
+}
+section.hero .herofull .line .dot {
+  top: -10px;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+}
 section.hero .herofull .heromain {
   height: 100%;
   margin: 0 auto;
@@ -310,6 +169,7 @@ section.hero .herofull .heromain .hero-box {
   background-color: #E9E5D9;
 }
 section.hero .herofull .heromain .hero-box .hero-text {
+  position: relative;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,8 +183,8 @@ section.hero .herofull .heromain .hero-box .hero-text {
           justify-content: space-between;
   padding: 5px 104px 0 42px;
 }
-section.hero .herofull .heromain .hero-box .hero-text h1 {
-  font: 600 100px Anjoman;
+section.hero .herofull .heromain .hero-box .hero-text h1.maintitle {
+  font-size: 100px;
 }
 section.hero .herofull .heromain .hero-box .hero-text span {
   font: 200 37px Anjoman;
@@ -334,8 +194,19 @@ section.hero .herofull .heromain .hero-box .hero-text P {
   font: 400 23px Anjoman;
   text-align: justify;
 }
-section.hero .herofull .heromain .hero-box .hero-text h2 {
-  font: 600 38px Anjoman;
+section.hero .herofull .heromain .hero-box .hero-text .line {
+  top: 0px;
+  left: unset;
+  right: 70px;
+  width: unset;
+  height: 97%;
+}
+section.hero .herofull .heromain .hero-box .hero-text .line .dot {
+  top: unset;
+  bottom: -2px;
+  left: -11px;
+  width: 20px;
+  height: 20px;
 }
 
 section.approach {
@@ -353,13 +224,11 @@ section.approach .appfull .appmain {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 auto;
 }
 section.approach .appfull .appmain .app-text {
   width: 600px;
   padding: 0 104px 0 80px;
-}
-section.approach .appfull .appmain .app-text h3 {
-  font: 600 28px Anjoman;
 }
 section.approach .appfull .appmain .app-text p {
   font: 400 16px Anjoman;
@@ -390,42 +259,112 @@ section.values {
   background-position: center center;
 }
 section.values .valfull {
-  height: 100vh;
+  position: relative;
+  height: 100%;
   background-color: rgba(61, 61, 61, 0.9);
   color: #E9E5D9;
+  padding-bottom: 115px;
+}
+section.values .valfull .line {
+  width: 50%;
+  top: -1px;
+  left: 0;
+}
+section.values .valfull .line .dot {
+  top: -10px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
 }
 section.values .valfull .val-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 30px;
   color: #E9E5D9;
 }
-section.values .valfull .val-box:nth-child(even) {
-  padding: 0 597px 0 0;
-}
 section.values .valfull .val-box:nth-child(odd) {
-  padding: 0 390px 0 0;
+  padding-left: 384px;
+}
+section.values .valfull .val-box:nth-child(odd) .empty-box {
+  width: 597px;
+}
+section.values .valfull .val-box:nth-child(even) {
+  padding-left: 604px;
+}
+section.values .valfull .val-box:nth-child(even) .empty-box {
+  width: 390px;
+}
+section.values .valfull .val-box .empty-box {
+  position: relative;
+}
+section.values .valfull .val-box .empty-box .line {
+  width: 100%;
+  top: 24px;
+  left: 24px;
+}
+section.values .valfull .val-box .empty-box .line .dot {
+  top: -5px;
+  right: unset;
+  left: -2px;
+  width: 10px;
+  height: 10px;
 }
 section.values .valfull .val-box .value {
-  width: 58%;
+  width: 50%;
 }
 section.values .valfull .val-box .value h3 {
   margin: 0 0 20px;
-  font: 600 28px Anjoman;
 }
 section.values .valfull .val-box .value p {
   margin: 0;
   font: 300 16px Anjoman;
   text-align: justify;
+  line-height: 26px;
 }
-section.values .valfull h1 {
-  margin: 0 356px 85px 0;
-  padding-top: 76px;
-  font: 600 38px Anjoman;
+section.values .valfull .val-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 76px 0 85px;
+}
+section.values .valfull .val-title .empty-box {
+  position: relative;
+  width: 323px;
+}
+section.values .valfull .val-title .empty-box .line {
+  width: 100%;
+  top: 30px;
+  left: 24px;
+}
+section.values .valfull .val-title .empty-box .line .dot {
+  top: -10px;
+  right: unset;
+  left: -2px;
+  width: 20px;
+  height: 20px;
 }
 
+section.projects .promain {
+  margin: 0 auto;
+}
 section.projects .promain .pro-title {
-  margin: 90px 100px 42px 0;
-  font: 600 38px Anjoman;
+  position: relative;
+  padding: 90px 100px 42px 0;
+}
+section.projects .promain .pro-title h1 {
   color: #3D3D3D;
+}
+section.projects .promain .pro-title .line {
+  top: 0;
+  right: 75px;
+  height: 129px;
+}
+section.projects .promain .pro-title .line .dot {
+  bottom: -2px;
+  left: -11px;
+  width: 20px;
+  height: 20px;
 }
 section.projects .promain .pro-each {
   height: 388px;
@@ -441,12 +380,12 @@ section.projects .promain .pro-each {
   margin: 0 0 64px 0;
 }
 section.projects .promain .pro-each .pro-right {
+  position: relative;
   width: 392px;
   margin-left: 88px;
 }
 section.projects .promain .pro-each .pro-right h3 {
   margin: 0 0 30px 0;
-  font: 600 28px Anjoman;
   color: #3D3D3D;
 }
 section.projects .promain .pro-each .pro-right p {
@@ -455,7 +394,14 @@ section.projects .promain .pro-each .pro-right p {
   text-align: justify;
   color: #3D3D3D;
 }
+section.projects .promain .pro-each .pro-right .dot {
+  top: 20px;
+  right: -20px;
+  width: 10px;
+  height: 10px;
+}
 section.projects .promain .pro-each .pro-left {
+  position: relative;
   width: 773px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -475,6 +421,43 @@ section.projects .promain .pro-each .pro-left .pro-pic {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  z-index: 10;
+}
+section.projects .promain .pro-each .pro-left .line {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+section.projects .promain .pro-each .pro-left .line .dot {
+  top: -9px;
+  width: 18px;
+  height: 18px;
+}
+section.projects .promain .pro-each .pro-left .line .dot:first-child {
+  right: 0;
+}
+section.projects .promain .pro-each .pro-left .line .dot:last-child {
+  left: 0;
+}
+section.projects .promain .pro-each .pro-left .temp-back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 713px;
+  height: 331px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.projects .promain .pro-each .pro-left .temp-back .temp-over {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(68, 68, 68, 0.8);
 }
 section.projects .promain .pro-each:last-child {
   height: 317px;
@@ -488,8 +471,28 @@ section.projects .promain .pro-each:last-child .pro-right {
 }
 
 section.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 82px 0 130px;
   background-color: #3D3D3D;
+}
+section.about .empty-box {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+}
+section.about .empty-box .line {
+  top: 33px;
+  left: 20px;
+  width: 100%;
+}
+section.about .empty-box .line .dot {
+  top: -10px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
 }
 section.about .aboutMain {
   display: -webkit-box;
@@ -507,7 +510,6 @@ section.about .aboutMain .ab-right {
 }
 section.about .aboutMain .ab-right h1 {
   margin: 0 0 30px;
-  font: 600 38px Anjoman;
   color: #E9E5D9;
 }
 section.about .aboutMain .ab-right p {
@@ -519,7 +521,6 @@ section.about .aboutMain .ab-right p {
 }
 section.about .aboutMain .ab-right h3 {
   margin: 80px 0 20px;
-  font: 600 24px Anjoman;
   color: #E9E5D9;
 }
 section.about .aboutMain .ab-right .ab-contact {
@@ -558,410 +559,4 @@ section.about .aboutMain .ab-left {
 section.about .aboutMain .ab-left img {
   width: 285px;
   height: 95px;
-}
-
-section#about {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  padding-right: 300px;
-}
-section#about h1 {
-  font-size: 56px;
-  color: #E87C12;
-  margin-bottom: 30px;
-}
-section#about p {
-  width: 80%;
-  font-size: 20px;
-  color: #3D3D3D;
-}
-
-section.list {
-  padding: 0 132px 132px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-section.list div {
-  position: relative;
-  width: 277px;
-  margin-right: 20px;
-}
-section.list div p {
-  font-size: 20px;
-}
-section.list div p span {
-  color: #E87C12;
-}
-section.list div i {
-  position: absolute;
-  top: 3px;
-  left: -30px;
-  color: #3D3D3D;
-}
-
-section#team {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  padding-top: 76px;
-}
-section#team .team-left,
-section#team .team-right {
-  width: 42%;
-}
-section#team .team-left {
-  padding-top: 40px;
-}
-section#team .team-left h1 {
-  font-size: 40px;
-  color: #E87C12;
-  margin-bottom: 30px;
-}
-section#team .team-left p {
-  font-size: 20px;
-}
-section#team .team-right {
-  background-color: #3D3D3D;
-  height: 592px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-section#projects {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-bottom: 60px;
-}
-section#projects .projects-top {
-  padding: 0 20%;
-}
-section#projects .projects-top h1,
-section#projects .projects-top p {
-  width: 100%;
-  text-align: center;
-}
-section#projects .projects-top h1 {
-  font-size: 40px;
-  color: #E87C12;
-  margin-bottom: 30px;
-}
-section#projects .projects-top p {
-  font-family: "Inter", serif;
-  font-size: 20px;
-  font-weight: 400;
-}
-section#projects .projects-down {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 100px;
-}
-section#projects .projects-down .project-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  width: 47%;
-  margin: 0 40px 40px 0;
-  padding: 17px;
-  border: 1px solid #ececec;
-  border-radius: 8px;
-}
-section#projects .projects-down .project-box:nth-child(2n) {
-  margin-right: 0;
-}
-section#projects .projects-down .project-box .pb-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  width: 60%;
-}
-section#projects .projects-down .project-box .pb-left h2,
-section#projects .projects-down .project-box .pb-left p {
-  margin-bottom: 20px;
-}
-section#projects .projects-down .project-box .pb-left h2 {
-  font-size: 20px;
-  color: #171A1F;
-}
-section#projects .projects-down .project-box .pb-left p {
-  font-size: 14px;
-  color: #3D3D3D;
-}
-section#projects .projects-down .project-box .pb-left a {
-  display: inline-block;
-  padding: 7px 18px;
-  border: 1px solid #E87C12;
-  border-radius: 8px;
-  color: #E87C12;
-  font-family: "Inter", serif;
-  font-size: 14px;
-  font-weight: 400;
-}
-section#projects .projects-down .project-box .pb-left a:hover {
-  background-color: #E87C12;
-  color: white;
-}
-section#projects .projects-down .project-box .pb-right {
-  width: 10vw;
-  height: 13vw;
-  background-color: #ccc;
-  border-radius: 8px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-section.lets div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  padding: 90px 0;
-  border-radius: 8px;
-  background-color: #FAFAFB;
-}
-section.lets div h1 {
-  text-align: center;
-  font-size: 48px;
-  font-weight: 900;
-  color: #E87C12;
-  margin-bottom: 30px;
-}
-section.lets div a {
-  padding: 10px 70px;
-  background-color: #E87C12;
-  border: 1px solid #E87C12;
-  color: white;
-  border-radius: 8px;
-  font-family: "Inter", serif;
-  font-size: 18px;
-  font-weight: 400;
-}
-section.lets div a:hover {
-  background-color: #FAFAFB;
-  color: #E87C12;
-}
-
-@media screen and (max-width: 1024px) {
-  section#about {
-    padding-right: 132px;
-  }
-  section.list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  section.list div {
-    width: 90%;
-    margin: 0 0 35px 25px;
-  }
-  section#team {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-  }
-  section#team .team-left {
-    width: 100%;
-    padding: 0 0 40px;
-  }
-  section#team .team-right {
-    width: 60%;
-  }
-  section#projects .projects-top {
-    padding: 0;
-  }
-  section#projects .projects-down .project-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    width: 100%;
-    padding: 17px;
-    margin: 0 0 15px;
-  }
-}
-@media screen and (max-width: 768px) {
-  section {
-    padding: 30px 20px;
-  }
-  section#top {
-    height: 420px;
-  }
-  section#top h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  section#top p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  section#top button {
-    padding: 7px 15px;
-    font-size: 14px;
-  }
-  section#about {
-    padding: 30px 20px 50px 20px;
-  }
-  section#about h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  section#about p {
-    width: 100%;
-    font-size: 14px;
-  }
-  section.list {
-    padding: 30px 20px;
-  }
-  section.list div {
-    margin: 0 0 25px 25px;
-    font-size: 14px;
-  }
-  section.list div p {
-    font-size: 14px;
-  }
-  section.list div p span {
-    margin-bottom: 10px;
-  }
-  section.list div i {
-    left: -25px;
-    font-size: 12 px;
-  }
-  section#team {
-    padding: 30px 20px;
-  }
-  section#team .team-left {
-    padding: 0 0 20px;
-  }
-  section#team .team-left h1 {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-  section#team .team-left p {
-    font-size: 12px;
-  }
-  section#team .team-right {
-    height: 240px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  section#projects {
-    padding-bottom: 10px;
-  }
-  section#projects .projects-top h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  section#projects .projects-top p {
-    font-size: 12px;
-  }
-  section#projects .projects-down {
-    margin-top: 30px;
-  }
-  section#projects .projects-down .project-box {
-    padding: 10px;
-  }
-  section#projects .projects-down .project-box .pb-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    width: 60%;
-  }
-  section#projects .projects-down .project-box .pb-left h2 {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  section#projects .projects-down .project-box .pb-left p {
-    margin-bottom: 0;
-    font-size: 12px;
-  }
-  section#projects .projects-down .project-box .pb-left a {
-    display: none;
-  }
-  section#projects .projects-down .project-box .pb-right {
-    width: 30vw;
-    height: 35vw;
-    background-color: #ccc;
-    border-radius: 8px;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  section.lets {
-    padding: 10px 20px 30px;
-  }
-  section.lets div {
-    padding: 0;
-    background-color: white;
-  }
-  section.lets div h1 {
-    font-size: 20px;
-    font-weight: 900;
-    margin-bottom: 15px;
-  }
-  section.lets div a {
-    padding: 7px 30px;
-    border-radius: 6px;
-    font-size: 14px;
-  }
 }
