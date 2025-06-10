@@ -7,6 +7,13 @@
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
     <title>{% trans "Haniz Sudio" %} {% block title %}{% endblock title %}</title>	
 	
+	<!-- Open Graph Tags -->
+    <meta property="og:title" content="{% block og_title %}Your Page Title{% endblock %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{% block og_url %}https://www.hanizstudio.com{% endblock %}" />
+    <meta property="og:image" content="{% block og_image %}{% static 'assets/logo_re.png' %}{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}استودیو طراحی تجربه{% endblock %}" />
+
 	<!-- lorapupa@azuretechtalk.net   >>> pass:hanizstudio -->
 	<script src="https://kit.fontawesome.com/9f95ff1f17.js" crossorigin="anonymous"></script>
 
