@@ -1,165 +1,91 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @font-face {
-  font-family: "now-400";
-  src: url("fonts/now/Now-Regular.woff2") format("woff2");
+  font-family: "Anjoman";
+  src: url("fonts/100-Anjoman-Thin.woff2") format("woff2");
+  font-weight: 100;
 }
-header {
-  position: fixed;
-  top: 0;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  height: 56px;
-  padding: 3px 24px 3px 70px;
-  z-index: 100;
+@font-face {
+  font-family: "Anjoman";
+  src: url("fonts/200-Anjoman-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
 }
-header .header-left, header .header-left nav, header .header-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%;
+@font-face {
+  font-family: "Anjoman";
+  src: url("fonts/300-Anjoman-Medium.woff2") format("woff2");
+  font-weight: 300;
 }
-header .header-left a, header .header-left nav a, header .header-right a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 14px;
+@font-face {
+  font-family: "Anjoman";
+  src: url("fonts/400-Anjoman-SemiBold.woff2") format("woff2");
+  font-weight: 400;
 }
-header .header-left .logo {
-  color: #3D3D3D;
-  margin-right: 40px;
-  font-size: 28px;
+@font-face {
+  font-family: "Anjoman";
+  src: url("fonts/500-Anjoman-Bold.woff2") format("woff2");
+  font-weight: 500;
 }
-header .header-left nav a {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  padding: 0 20px;
-  border-bottom: 3px solid white;
-  color: #565E6C;
+@font-face {
+  font-family: "Anjoman";
+  src: url("fonts/600-Anjoman-ExtraBold.woff2") format("woff2");
+  font-weight: 600;
 }
-header .header-left nav a.active, header .header-left nav a:hover {
+@font-face {
+  font-family: "Anjoman";
+  src: url("fonts/700-Anjoman-UltraBold.woff2") format("woff2");
   font-weight: 700;
-  color: #E87C12;
 }
-header .header-left nav a.active {
-  border-color: #E87C12;
+@font-face {
+  font-family: "Anjoman";
+  src: url("fonts/800-Anjoman-Black.woff2") format("woff2");
+  font-weight: 800;
 }
-header .header-left nav img {
-  display: none;
-  cursor: pointer;
+@font-face {
+  font-family: "Anjoman";
+  src: url("fonts/900-Anjoman-Heavy.woff2") format("woff2");
+  font-weight: 900;
 }
-header .header-right a {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 8px;
-  color: white;
-}
-header .header-right a.h-contact {
-  padding: 10px 30px;
-  background-color: #E87C12;
-  margin-left: 10px;
-}
-header .header-right a.h-contact i {
-  margin-right: 10px;
-}
-header .header-right a.h-lang {
-  padding: 10px;
-  background-color: #3D3D3D;
-  font-family: "Inter", serif;
-}
-header .header-right a.h-lang i {
-  margin-left: 30px;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-#mobile {
-  position: fixed;
-  top: 0;
-  left: 0;
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background-color: #E9E5D9;
+}
+
+main {
   width: 100%;
-  height: 0;
-  background-color: white;
-  z-index: 200;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 0;
-  overflow-y: hidden;
-}
-#mobile i {
-  position: absolute;
-  top: 15px;
-  right: 24px;
-  font-size: 2.5vw;
-  color: #3D3D3D;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  cursor: pointer;
-}
-#mobile i:hover i {
-  color: #E87C12;
-}
-#mobile nav {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-#mobile nav a {
-  font-size: 3vw;
-  margin-bottom: 10px;
-  color: #3D3D3D;
-}
-#mobile nav a:hover {
-  color: #E87C12;
 }
 
-@media screen and (max-width: 1150px) {
-  header {
-    padding: 3px 20px 3px 20px;
-  }
-  header .header-left {
-    width: 100%;
-  }
-  header .header-left nav a {
-    display: none;
-  }
-  header .header-left nav img {
-    display: inline-block;
-  }
-  header .header-right {
-    display: none;
-  }
+.wfull {
+  width: 100%;
 }
+
+.wmain {
+  width: 1273px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,7 +116,8 @@ footer .footer-down {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-footer .footer-down .fd-nav, footer .footer-down .db-bot {
+footer .footer-down .fd-nav,
+footer .footer-down .db-bot {
   width: 100%;
 }
 footer .footer-down .fd-nav {
@@ -351,65 +278,286 @@ footer .footer-down .fd-bot .socials a:hover {
     color: #E9E5D9;
   }
 }
-* {
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "now-400";
-  scroll-margin-top: 55px;
-}
-
-a {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
 section {
+  position: relative;
+  padding: 0;
+}
+
+section.hero,
+section.approach {
+  color: #3D3D3D;
+}
+
+section.hero {
+  min-height: 100vh;
+  background: url("images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.hero .herofull {
+  position: absolute;
+  bottom: -212px;
+  height: 498px;
+}
+section.hero .herofull .heromain {
+  height: 100%;
+  margin: 0 auto;
+}
+section.hero .herofull .heromain .hero-box {
+  width: 666px;
+  height: 100%;
+  background-color: #E9E5D9;
+}
+section.hero .herofull .heromain .hero-box .hero-text {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  padding: 115px 132px;
-}
-
-section#top {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  height: 640px;
-  margin-top: 56px;
-  padding-right: 20%;
-  background-color: #3D3D3D;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 104px 0 42px;
 }
-section#top h1, section#top p {
-  color: #E9E5D9;
+section.hero .herofull .heromain .hero-box .hero-text h1 {
+  font: 600 100px Anjoman;
 }
-section#top h1 {
-  font-size: 64px;
-  margin-bottom: 30px;
-}
-section#top p {
-  font-size: 24px;
+section.hero .herofull .heromain .hero-box .hero-text span {
+  font: 200 37px Anjoman;
   margin-bottom: 20px;
 }
-section#top button {
-  padding: 12px 20px;
-  border-radius: 6px;
-  background-color: #E87C12;
-  color: white;
-  border: none;
-  outline: none;
-  font-family: "Inter", serif;
-  font-size: 18px;
-  font-weight: 400;
+section.hero .herofull .heromain .hero-box .hero-text P {
+  font: 400 23px Anjoman;
+  text-align: justify;
+}
+section.hero .herofull .heromain .hero-box .hero-text h2 {
+  font: 600 38px Anjoman;
+}
+
+section.approach {
+  margin: 212px 0 0;
+  padding: 64px 0;
+}
+section.approach .appfull {
+  height: 455px;
+  margin-bottom: 66px;
+}
+section.approach .appfull .appmain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+section.approach .appfull .appmain .app-text {
+  width: 600px;
+  padding: 0 104px 0 80px;
+}
+section.approach .appfull .appmain .app-text h3 {
+  font: 600 28px Anjoman;
+}
+section.approach .appfull .appmain .app-text p {
+  font: 400 16px Anjoman;
+  text-align: justify;
+}
+section.approach .appfull .appmain .app-pic {
+  width: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+section.approach .appfull .appmain .app-pic img {
+  width: 600px;
+}
+section.approach .appfull.appfull:nth-child(even) {
+  direction: ltr;
+}
+section.approach .appfull.appfull:nth-child(even) .app-text {
+  direction: rtl;
+}
+
+section.values {
+  min-height: 100vh;
+  background: url("images/values.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.values .valfull {
+  height: 100vh;
+  background-color: rgba(61, 61, 61, 0.9);
+  color: #E9E5D9;
+}
+section.values .valfull .val-box {
+  margin-bottom: 30px;
+  color: #E9E5D9;
+}
+section.values .valfull .val-box:nth-child(even) {
+  padding: 0 597px 0 0;
+}
+section.values .valfull .val-box:nth-child(odd) {
+  padding: 0 390px 0 0;
+}
+section.values .valfull .val-box .value {
+  width: 58%;
+}
+section.values .valfull .val-box .value h3 {
+  margin: 0 0 20px;
+  font: 600 28px Anjoman;
+}
+section.values .valfull .val-box .value p {
+  margin: 0;
+  font: 300 16px Anjoman;
+  text-align: justify;
+}
+section.values .valfull h1 {
+  margin: 0 356px 85px 0;
+  padding-top: 76px;
+  font: 600 38px Anjoman;
+}
+
+section.projects .promain .pro-title {
+  margin: 90px 100px 42px 0;
+  font: 600 38px Anjoman;
+  color: #3D3D3D;
+}
+section.projects .promain .pro-each {
+  height: 388px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 64px 0;
+}
+section.projects .promain .pro-each .pro-right {
+  width: 392px;
+  margin-left: 88px;
+}
+section.projects .promain .pro-each .pro-right h3 {
+  margin: 0 0 30px 0;
+  font: 600 28px Anjoman;
+  color: #3D3D3D;
+}
+section.projects .promain .pro-each .pro-right p {
+  margin: 0;
+  font: 300 14px Anjoman;
+  text-align: justify;
+  color: #3D3D3D;
+}
+section.projects .promain .pro-each .pro-left {
+  width: 773px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.projects .promain .pro-each .pro-left .pro-pic {
+  width: 525px;
+  height: 388px;
+  border-radius: 10px;
+  background-color: aquamarine;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.projects .promain .pro-each:last-child {
+  height: 317px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0;
+}
+section.projects .promain .pro-each:last-child .pro-right {
+  width: 600px;
+}
+
+section.about {
+  padding: 82px 0 130px;
+  background-color: #3D3D3D;
+}
+section.about .aboutMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+section.about .aboutMain .ab-right {
+  width: 704px;
+}
+section.about .aboutMain .ab-right h1 {
+  margin: 0 0 30px;
+  font: 600 38px Anjoman;
+  color: #E9E5D9;
+}
+section.about .aboutMain .ab-right p {
+  margin: 0;
+  font: 300 16px Anjoman;
+  text-align: justify;
+  color: #E9E5D9;
+  margin-bottom: 20px;
+}
+section.about .aboutMain .ab-right h3 {
+  margin: 80px 0 20px;
+  font: 600 24px Anjoman;
+  color: #E9E5D9;
+}
+section.about .aboutMain .ab-right .ab-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.about .aboutMain .ab-right .ab-contact div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section.about .aboutMain .ab-right .ab-contact div h6 {
+  margin: 0;
+  font: 300 16px Anjoman;
+  color: #E9E5D9;
+}
+section.about .aboutMain .ab-right .ab-contact img {
+  width: 34px;
+  height: 34px;
+  margin-right: 30px;
+}
+section.about .aboutMain .ab-left {
+  color: #E9E5D9;
+}
+section.about .aboutMain .ab-left img {
+  width: 285px;
+  height: 95px;
 }
 
 section#about {
@@ -466,7 +614,8 @@ section#team {
           align-items: start;
   padding-top: 76px;
 }
-section#team .team-left, section#team .team-right {
+section#team .team-left,
+section#team .team-right {
   width: 42%;
 }
 section#team .team-left {
@@ -497,7 +646,8 @@ section#projects {
 section#projects .projects-top {
   padding: 0 20%;
 }
-section#projects .projects-top h1, section#projects .projects-top p {
+section#projects .projects-top h1,
+section#projects .projects-top p {
   width: 100%;
   text-align: center;
 }
@@ -557,7 +707,8 @@ section#projects .projects-down .project-box .pb-left {
           align-items: start;
   width: 60%;
 }
-section#projects .projects-down .project-box .pb-left h2, section#projects .projects-down .project-box .pb-left p {
+section#projects .projects-down .project-box .pb-left h2,
+section#projects .projects-down .project-box .pb-left p {
   margin-bottom: 20px;
 }
 section#projects .projects-down .project-box .pb-left h2 {
