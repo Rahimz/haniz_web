@@ -13,7 +13,7 @@ section.approach {
 
 section.hero {
     min-height: 100vh;
-    background: url('images/hero.jpg');
+    background: url('images/hero.jpg') no-repeat;
     @include ccbg;
 
     .herofull {
@@ -27,7 +27,7 @@ section.hero {
             width: 70%;
 
             .dot {
-                top: -10px;
+                top: -11px;
                 left: -2px;
                 width: 20px;
                 height: 20px;
@@ -35,6 +35,7 @@ section.hero {
         }
 
         .heromain {
+            width: $wmain;
             height: 100%;
             margin: 0 auto;
 
@@ -50,7 +51,6 @@ section.hero {
                     flex-direction: column;
                     justify-content: space-between;
                     padding: 5px 104px 0 42px;
-                    // background-color: aquamarine;
 
                     h1.maintitle {
                         font-size: 100px;
@@ -58,12 +58,12 @@ section.hero {
 
                     span {
                         font: 200 37px Anjoman;
-                        margin-bottom: 20px;
                     }
 
                     P {
                         font: 400 23px Anjoman;
                         text-align: justify;
+                        margin: 22px 0;
                     }
 
                     .line {
@@ -92,19 +92,27 @@ section.approach {
     padding: 64px 0;
 
     .appfull {
+        position: relative;
         height: 455px;
         margin-bottom: 66px;
 
         .appmain {
+            width: $wmain;
+            height: 100%;
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
-            // background-color: aquamarine;
+            // background-color: brown;
+
+            .app-text,
+            .app-pic {
+                width: 48%;
+            }
 
             .app-text {
-                width: 600px;
+                position: relative;
                 padding: 0 104px 0 80px;
-                // background-color: aqua;
+                // background-color: yellow;
 
                 p {
                     font: 400 16px Anjoman;
@@ -113,10 +121,8 @@ section.approach {
             }
 
             .app-pic {
-                width: 600px;
+                background-color: green;
                 @include ccbg;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
 
                 img {
                     width: 600px;
@@ -124,29 +130,80 @@ section.approach {
             }
         }
 
+        .line2 {
+            width: calc((100vw - 1120px)/2);
+            top: 22px;
+            right: 0;
+
+            .dot {
+                top: -11px;
+                left: -2px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
         &.appfull:nth-child(odd) {
-            .app-text {}
+            .line {
+                width: 56%;
+                bottom: 0;
+                left: 0;
+
+                .dot {
+                    top: -11px;
+                    right: -2px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .app-pic {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
         }
 
         &.appfull:nth-child(even) {
             direction: ltr;
 
+            .line {
+                width: 56%;
+                top: 0;
+                right: 0;
+
+                .dot {
+                    top: -11px;
+                    left: -2px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .line2 {
+                display: none;
+            }
+
             .app-text {
                 direction: rtl;
+                margin-top: -25px;
+            }
+
+            .app-pic {
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
             }
         }
     }
 }
 
 section.values {
-    min-height: 100vh;
     background: url('images/values.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
 
     .valfull {
         position: relative;
-        height: 100%;
+        min-height: 100vh;
         background-color: rgba($color: $dark, $alpha: 0.9);
         color: $light;
         padding-bottom: 115px;
@@ -194,7 +251,7 @@ section.values {
                     left: 24px;
 
                     .dot {
-                        top: -5px;
+                        top: -6px;
                         right: unset;
                         left: -2px;
                         width: 10px;
@@ -248,6 +305,8 @@ section.values {
 
 section.projects {
     .promain {
+        width: $wmain;
+        height: 100%;
         margin: 0 auto;
 
         .pro-title {
@@ -404,6 +463,7 @@ section.about {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        // background-color: antiquewhite;
 
         .ab-right {
             width: 704px;
@@ -414,11 +474,10 @@ section.about {
             }
 
             p {
-                margin: 0;
                 font: 300 16px Anjoman;
                 text-align: justify;
                 color: $light;
-                margin-bottom: 20px;
+                margin: 0 0 20px;
             }
 
             h3 {
@@ -466,9 +525,372 @@ section.about {
 
 
 
+@media screen and (max-width: 768px) {
+    section.hero {
+        height: 100%;
 
+        .herofull {
+            bottom: -185px;
+            height: unset;
 
+            .line {
+                left: 15%;
+                width: 85%;
 
-@media screen and (max-width: 1024px) {}
+                .dot {
+                    top: -6px;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
 
-@media screen and (max-width: 768px) {}
+            .heromain {
+                width: calc(100vw - 32px) !important;
+
+                .hero-box {
+                    width: 240px;
+
+                    .hero-text {
+                        overflow: visible;
+                        padding: 0 34px 0 30px;
+
+                        h1.maintitle {
+                            font-size: 60px;
+                        }
+
+                        span {
+                            font-size: 22px;
+                        }
+
+                        P {
+                            width: 150%;
+                            font-size: 12px;
+                            margin: 20px 0 60px;
+                        }
+
+                        .line {
+                            right: 13px;
+                            height: 98%;
+
+                            .dot {
+                                left: -6px;
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.approach {
+        margin: 190px 0 0;
+        padding: 35px 0 0;
+
+        .appfull {
+            height: unset;
+            margin-bottom: 60px;
+
+            .appmain {
+                width: $wmob;
+                min-height: 100%;
+                flex-direction: column;
+                // justify-content: flex-start;
+                align-items: center;
+
+                .app-text,
+                .app-pic {
+                    width: 265px !important;
+                }
+
+                .app-text {
+                    position: relative;
+                    padding: 0 0 30px 0;
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+
+                .app-pic {
+                    height: 222px;
+
+                    img {
+                        width: 300px;
+                    }
+                }
+            }
+
+            .line2 {
+                width: 33px !important;
+                top: 12px;
+
+                .dot {
+                    top: -6px;
+                    left: -2px;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            &.appfull:nth-child(odd) {
+                .line {
+                    width: 94%;
+
+                    .dot {
+                        top: -6px;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+
+            &.appfull:nth-child(even) {
+                direction: rtl;
+
+                .line {
+                    width: 94%;
+                    top: unset;
+                    bottom: 222px;
+
+                    .dot {
+                        top: -6px;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+
+                .line2 {
+                    display: inline-block;
+                }
+
+                .app-text {
+                    margin-top: 0;
+                }
+
+            }
+        }
+    }
+
+    section.values {
+        .valfull {
+            padding-bottom: 63px;
+
+            .line {
+                .dot {
+                    top: -6px;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            .val-box {
+
+                &:nth-child(odd),
+                &:nth-child(even) {
+                    padding-left: 48px;
+
+                    .empty-box {
+                        width: 91px;
+                    }
+                }
+
+                .empty-box {
+                    .line {
+                        width: 100%;
+                        top: 12px;
+                        left: 10px;
+                    }
+                }
+
+                .value {
+                    width: 100%;
+
+                    h3 {
+                        margin: 0 0 10px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .val-title {
+                padding: 38px 0 30px;
+
+                .empty-box {
+                    width: 47px;
+
+                    .line {
+                        width: 100%;
+                        top: 15px;
+                        left: 15px;
+
+                        .dot {
+                            top: -6px;
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    section.projects {
+        .promain {
+            width: $wmob;
+            margin: 0 auto;
+
+            .pro-title {
+                padding: 68px 40px 28px 0;
+
+                .line {
+                    right: 20px;
+                    height: 88px;
+
+                    .dot {
+                        bottom: -2px;
+                        left: -6px;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+
+            .pro-each {
+                height: unset;
+                min-height: 50px;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 0 60px 0;
+                padding: 0 16px;
+
+                .pro-right {
+                    width: 250px;
+                    margin: 0 auto;
+
+                    h3 {
+                        margin: 0 0 15px 0;
+                    }
+
+                    p {
+                        font-size: 12pxn;
+                    }
+
+                    .dot {
+                        top: 10px;
+                    }
+                }
+
+                .pro-left {
+                    width: 100%;
+                    margin-top: 30px;
+
+                    .pro-pic {
+                        width: 265px;
+                        height: 194px;
+                    }
+
+                    .line {
+                        display: none;
+                    }
+
+                    .temp-back {
+                        width: 100%;
+                        height: 165px;
+
+                        .temp-over {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            background-color: rgba($color: #444444, $alpha: 0.8);
+                        }
+                    }
+                }
+
+                &:last-child {
+                    height: unset;
+                    align-items: flex-start;
+                    margin: 0 0 60px 0;
+
+                    .pro-right {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.about {
+        padding: 48px 0;
+
+        .empty-box {
+            .line {
+                top: 15px;
+                left: 15px;
+
+                .dot {
+                    top: -6px;
+                    left: -2px;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+
+        .aboutMain {
+            width: 265px !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .ab-right {
+                width: 100%;
+                margin-bottom: 128px;
+
+                h1 {
+                    margin: 0 0 30px;
+                }
+
+                p {
+                    font-size: 12px;
+                    margin: 0 0 12px;
+                }
+
+                h3 {
+                    margin: 30px 0 10px;
+                }
+
+                .ab-contact {
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    div {
+                        h6 {
+                            margin: 0 10px 0 0;
+                            font-size: 12px;
+                        }
+                    }
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .ab-left {
+                img {
+                    width: 143px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+}

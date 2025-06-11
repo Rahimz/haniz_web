@@ -36,6 +36,7 @@ body {
 
 main {
     width: $wfull;
+    // background-color: yellow;
 }
 
 .wfull {
@@ -54,7 +55,8 @@ main {
 
 
 // ------------------------------ //
-.line {
+.line,
+.line2 {
     position: absolute;
 
     &.h-line {
@@ -74,7 +76,7 @@ main {
     }
 
     &.d-line {
-        border-color: $dark;
+        border-color: #444444;
     }
 }
 
@@ -92,5 +94,19 @@ main {
 
     &.d-dot {
         background-color: $dark;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
     }
 }

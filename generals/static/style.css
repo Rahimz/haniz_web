@@ -93,23 +93,29 @@ main {
   height: 100%;
 }
 
-.line {
+.line,
+.line2 {
   position: absolute;
 }
-.line.h-line {
+.line.h-line,
+.line2.h-line {
   border-top: 2px solid;
 }
-.line.v-line {
+.line.v-line,
+.line2.v-line {
   border-left: 2px solid;
 }
-.line.o-line {
+.line.o-line,
+.line2.o-line {
   border-color: #E87C12;
 }
-.line.l-line {
+.line.l-line,
+.line2.l-line {
   border-color: #E9E5D9;
 }
-.line.d-line {
-  border-color: #3D3D3D;
+.line.d-line,
+.line2.d-line {
+  border-color: #444444;
 }
 
 .dot {
@@ -126,6 +132,14 @@ main {
   background-color: #3D3D3D;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+}
 section {
   position: relative;
   padding: 0;
@@ -138,7 +152,7 @@ section.approach {
 
 section.hero {
   min-height: 100vh;
-  background: url("images/hero.jpg");
+  background: url("images/hero.jpg") no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -154,12 +168,13 @@ section.hero .herofull .line {
   width: 70%;
 }
 section.hero .herofull .line .dot {
-  top: -10px;
+  top: -11px;
   left: -2px;
   width: 20px;
   height: 20px;
 }
 section.hero .herofull .heromain {
+  width: 1273px !important;
   height: 100%;
   margin: 0 auto;
 }
@@ -188,11 +203,11 @@ section.hero .herofull .heromain .hero-box .hero-text h1.maintitle {
 }
 section.hero .herofull .heromain .hero-box .hero-text span {
   font: 200 37px Anjoman;
-  margin-bottom: 20px;
 }
 section.hero .herofull .heromain .hero-box .hero-text P {
   font: 400 23px Anjoman;
   text-align: justify;
+  margin: 22px 0;
 }
 section.hero .herofull .heromain .hero-box .hero-text .line {
   top: 0px;
@@ -214,10 +229,13 @@ section.approach {
   padding: 64px 0;
 }
 section.approach .appfull {
+  position: relative;
   height: 455px;
   margin-bottom: 66px;
 }
 section.approach .appfull .appmain {
+  width: 1273px !important;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,8 +244,12 @@ section.approach .appfull .appmain {
           justify-content: space-between;
   margin: 0 auto;
 }
+section.approach .appfull .appmain .app-text,
+section.approach .appfull .appmain .app-pic {
+  width: 48%;
+}
 section.approach .appfull .appmain .app-text {
-  width: 600px;
+  position: relative;
   padding: 0 104px 0 80px;
 }
 section.approach .appfull .appmain .app-text p {
@@ -235,32 +257,74 @@ section.approach .appfull .appmain .app-text p {
   text-align: justify;
 }
 section.approach .appfull .appmain .app-pic {
-  width: 600px;
+  background-color: green;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 section.approach .appfull .appmain .app-pic img {
   width: 600px;
 }
+section.approach .appfull .line2 {
+  width: calc((100vw - 1120px) / 2);
+  top: 22px;
+  right: 0;
+}
+section.approach .appfull .line2 .dot {
+  top: -11px;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+}
+section.approach .appfull.appfull:nth-child(odd) .line {
+  width: 56%;
+  bottom: 0;
+  left: 0;
+}
+section.approach .appfull.appfull:nth-child(odd) .line .dot {
+  top: -11px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
+}
+section.approach .appfull.appfull:nth-child(odd) .app-pic {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
 section.approach .appfull.appfull:nth-child(even) {
   direction: ltr;
 }
+section.approach .appfull.appfull:nth-child(even) .line {
+  width: 56%;
+  top: 0;
+  right: 0;
+}
+section.approach .appfull.appfull:nth-child(even) .line .dot {
+  top: -11px;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+}
+section.approach .appfull.appfull:nth-child(even) .line2 {
+  display: none;
+}
 section.approach .appfull.appfull:nth-child(even) .app-text {
   direction: rtl;
+  margin-top: -25px;
+}
+section.approach .appfull.appfull:nth-child(even) .app-pic {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 section.values {
-  min-height: 100vh;
   background: url("images/values.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
 }
 section.values .valfull {
   position: relative;
-  height: 100%;
+  min-height: 100vh;
   background-color: rgba(61, 61, 61, 0.9);
   color: #E9E5D9;
   padding-bottom: 115px;
@@ -304,7 +368,7 @@ section.values .valfull .val-box .empty-box .line {
   left: 24px;
 }
 section.values .valfull .val-box .empty-box .line .dot {
-  top: -5px;
+  top: -6px;
   right: unset;
   left: -2px;
   width: 10px;
@@ -346,6 +410,8 @@ section.values .valfull .val-title .empty-box .line .dot {
 }
 
 section.projects .promain {
+  width: 1273px !important;
+  height: 100%;
   margin: 0 auto;
 }
 section.projects .promain .pro-title {
@@ -513,11 +579,10 @@ section.about .aboutMain .ab-right h1 {
   color: #E9E5D9;
 }
 section.about .aboutMain .ab-right p {
-  margin: 0;
   font: 300 16px Anjoman;
   text-align: justify;
   color: #E9E5D9;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 section.about .aboutMain .ab-right h3 {
   margin: 80px 0 20px;
@@ -559,4 +624,308 @@ section.about .aboutMain .ab-left {
 section.about .aboutMain .ab-left img {
   width: 285px;
   height: 95px;
+}
+
+@media screen and (max-width: 768px) {
+  section.hero {
+    height: 100%;
+  }
+  section.hero .herofull {
+    bottom: -185px;
+    height: unset;
+  }
+  section.hero .herofull .line {
+    left: 15%;
+    width: 85%;
+  }
+  section.hero .herofull .line .dot {
+    top: -6px;
+    width: 10px;
+    height: 10px;
+  }
+  section.hero .herofull .heromain {
+    width: calc(100vw - 32px) !important;
+  }
+  section.hero .herofull .heromain .hero-box {
+    width: 240px;
+  }
+  section.hero .herofull .heromain .hero-box .hero-text {
+    overflow: visible;
+    padding: 0 34px 0 30px;
+  }
+  section.hero .herofull .heromain .hero-box .hero-text h1.maintitle {
+    font-size: 60px;
+  }
+  section.hero .herofull .heromain .hero-box .hero-text span {
+    font-size: 22px;
+  }
+  section.hero .herofull .heromain .hero-box .hero-text P {
+    width: 150%;
+    font-size: 12px;
+    margin: 20px 0 60px;
+  }
+  section.hero .herofull .heromain .hero-box .hero-text .line {
+    right: 13px;
+    height: 98%;
+  }
+  section.hero .herofull .heromain .hero-box .hero-text .line .dot {
+    left: -6px;
+    width: 10px;
+    height: 10px;
+  }
+  section.approach {
+    margin: 190px 0 0;
+    padding: 35px 0 0;
+  }
+  section.approach .appfull {
+    height: unset;
+    margin-bottom: 60px;
+  }
+  section.approach .appfull .appmain {
+    width: 100% !important;
+    min-height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.approach .appfull .appmain .app-text,
+  section.approach .appfull .appmain .app-pic {
+    width: 265px !important;
+  }
+  section.approach .appfull .appmain .app-text {
+    position: relative;
+    padding: 0 0 30px 0;
+  }
+  section.approach .appfull .appmain .app-text p {
+    font-size: 12px;
+  }
+  section.approach .appfull .appmain .app-pic {
+    height: 222px;
+  }
+  section.approach .appfull .appmain .app-pic img {
+    width: 300px;
+  }
+  section.approach .appfull .line2 {
+    width: 33px !important;
+    top: 12px;
+  }
+  section.approach .appfull .line2 .dot {
+    top: -6px;
+    left: -2px;
+    width: 10px;
+    height: 10px;
+  }
+  section.approach .appfull.appfull:nth-child(odd) .line {
+    width: 94%;
+  }
+  section.approach .appfull.appfull:nth-child(odd) .line .dot {
+    top: -6px;
+    width: 10px;
+    height: 10px;
+  }
+  section.approach .appfull.appfull:nth-child(even) {
+    direction: rtl;
+  }
+  section.approach .appfull.appfull:nth-child(even) .line {
+    width: 94%;
+    top: unset;
+    bottom: 222px;
+  }
+  section.approach .appfull.appfull:nth-child(even) .line .dot {
+    top: -6px;
+    width: 10px;
+    height: 10px;
+  }
+  section.approach .appfull.appfull:nth-child(even) .line2 {
+    display: inline-block;
+  }
+  section.approach .appfull.appfull:nth-child(even) .app-text {
+    margin-top: 0;
+  }
+  section.values .valfull {
+    padding-bottom: 63px;
+  }
+  section.values .valfull .line .dot {
+    top: -6px;
+    width: 10px;
+    height: 10px;
+  }
+  section.values .valfull .val-box:nth-child(odd), section.values .valfull .val-box:nth-child(even) {
+    padding-left: 48px;
+  }
+  section.values .valfull .val-box:nth-child(odd) .empty-box, section.values .valfull .val-box:nth-child(even) .empty-box {
+    width: 91px;
+  }
+  section.values .valfull .val-box .empty-box .line {
+    width: 100%;
+    top: 12px;
+    left: 10px;
+  }
+  section.values .valfull .val-box .value {
+    width: 100%;
+  }
+  section.values .valfull .val-box .value h3 {
+    margin: 0 0 10px;
+  }
+  section.values .valfull .val-box .value p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  section.values .valfull .val-title {
+    padding: 38px 0 30px;
+  }
+  section.values .valfull .val-title .empty-box {
+    width: 47px;
+  }
+  section.values .valfull .val-title .empty-box .line {
+    width: 100%;
+    top: 15px;
+    left: 15px;
+  }
+  section.values .valfull .val-title .empty-box .line .dot {
+    top: -6px;
+    width: 10px;
+    height: 10px;
+  }
+  section.projects .promain {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  section.projects .promain .pro-title {
+    padding: 68px 40px 28px 0;
+  }
+  section.projects .promain .pro-title .line {
+    right: 20px;
+    height: 88px;
+  }
+  section.projects .promain .pro-title .line .dot {
+    bottom: -2px;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+  }
+  section.projects .promain .pro-each {
+    height: unset;
+    min-height: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 60px 0;
+    padding: 0 16px;
+  }
+  section.projects .promain .pro-each .pro-right {
+    width: 250px;
+    margin: 0 auto;
+  }
+  section.projects .promain .pro-each .pro-right h3 {
+    margin: 0 0 15px 0;
+  }
+  section.projects .promain .pro-each .pro-right p {
+    font-size: 12pxn;
+  }
+  section.projects .promain .pro-each .pro-right .dot {
+    top: 10px;
+  }
+  section.projects .promain .pro-each .pro-left {
+    width: 100%;
+    margin-top: 30px;
+  }
+  section.projects .promain .pro-each .pro-left .pro-pic {
+    width: 265px;
+    height: 194px;
+  }
+  section.projects .promain .pro-each .pro-left .line {
+    display: none;
+  }
+  section.projects .promain .pro-each .pro-left .temp-back {
+    width: 100%;
+    height: 165px;
+  }
+  section.projects .promain .pro-each .pro-left .temp-back .temp-over {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(68, 68, 68, 0.8);
+  }
+  section.projects .promain .pro-each:last-child {
+    height: unset;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 60px 0;
+  }
+  section.projects .promain .pro-each:last-child .pro-right {
+    width: 250px;
+  }
+  section.about {
+    padding: 48px 0;
+  }
+  section.about .empty-box .line {
+    top: 15px;
+    left: 15px;
+  }
+  section.about .empty-box .line .dot {
+    top: -6px;
+    left: -2px;
+    width: 10px;
+    height: 10px;
+  }
+  section.about .aboutMain {
+    width: 265px !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.about .aboutMain .ab-right {
+    width: 100%;
+    margin-bottom: 128px;
+  }
+  section.about .aboutMain .ab-right h1 {
+    margin: 0 0 30px;
+  }
+  section.about .aboutMain .ab-right p {
+    font-size: 12px;
+    margin: 0 0 12px;
+  }
+  section.about .aboutMain .ab-right h3 {
+    margin: 30px 0 10px;
+  }
+  section.about .aboutMain .ab-right .ab-contact {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  section.about .aboutMain .ab-right .ab-contact div h6 {
+    margin: 0 10px 0 0;
+    font-size: 12px;
+  }
+  section.about .aboutMain .ab-right .ab-contact img {
+    width: 30px;
+    height: 30px;
+  }
+  section.about .aboutMain .ab-left img {
+    width: 143px;
+    height: 48px;
+  }
 }
