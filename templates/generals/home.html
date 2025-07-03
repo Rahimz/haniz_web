@@ -4,28 +4,28 @@
 {% block content %}
 <section class="hero">
 	<div class="wfull herofull">
-		<div class="line h-line l-line">
+		<div class="line h-line l-line" id="heroFirstLine">
 			<div class="dot o-dot"></div>
 		</div>
 
 		<div class="heromain">
-			<div class="hero-box">
+			<div class="hero-box" id="heroBox">
 				<div class="hero-text">
-					<div class="line v-line d-line">
+					<div class="line v-line d-line heroSecondLine">
 						<div class="dot o-dot"></div>
 					</div>
 
 					<div>
-						<h1 class="maintitle">هَنــیــز</h1>
-						<span>استودیو طراحی تجربه</span>
-						<p>
+						<h1 class="maintitle" id="heroMainTitle">هَنــیــز</h1>
+						<span class="subtitle" id="heroSubTitle">استودیو طراحی تجربه</span>
+						<p class="hero-p">
 							ماموریت ما در هَنیز، ایده‌پردازی و طراحی روایت‌هایی است که به تجربه‌ای روشن، قابل
 							لمس و
 							ماندگار برای مخاطب تبدیل شوند. ما با تکیه بر نگاه تحلیلی و طراحی تعاملی، پیام را به
 							تجربه و فضا را به معنا پیوند می‌دهیم.
 						</p>
 					</div>
-					<h1>رویــکـرد هَـنیـز</h1>
+					<h1 class="nexttitle">رویــکـرد هَـنیـز</h1>
 				</div>
 			</div>
 		</div>
@@ -371,3 +371,10 @@
 	<div class="empty-box"></div>
 </section>
 {% endblock content %}
+
+{% block script %}
+  <script type="text/javascript" src="{% static 'GSAP/gsap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'GSAP/ScrollTrigger.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'gsap.js' %}"></script>
+	<script type="text/javascript" src="{% static 'app.js' %}"></script>
+{% endblock script %}

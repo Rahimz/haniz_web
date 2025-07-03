@@ -1,5 +1,6 @@
 @import "vars";
 @import "comm";
+@import "animate";
 
 section {
     position: relative;
@@ -23,7 +24,6 @@ section.hero {
 
         .line {
             top: 0px;
-            left: 30%;
             width: 70%;
 
             .dot {
@@ -31,6 +31,10 @@ section.hero {
                 left: -2px;
                 width: 20px;
                 height: 20px;
+            }
+
+            &.heroFirstLine {
+                animation: heroFirstLine 1.5s;
             }
         }
 
@@ -40,9 +44,13 @@ section.hero {
             margin: 0 auto;
 
             .hero-box {
+                height: 0;
                 width: 666px;
-                height: 100%;
                 background-color: $light;
+
+                &.heroBox {
+                    animation: heroBox 2.5s 1.5s;
+                }
 
                 .hero-text {
                     position: relative;
@@ -51,27 +59,39 @@ section.hero {
                     flex-direction: column;
                     justify-content: space-between;
                     padding: 5px 104px 0 42px;
+                    overflow: hidden;
 
                     h1.maintitle {
+                        opacity: 0;
                         font-size: 100px;
+
+                        &.heroMainTitle {
+                            animation: heroMainTitle 1s linear 2.5s;
+                        }
                     }
 
-                    span {
+                    span.subtitle {
+                        opacity: 0;
                         font: 200 37px Anjoman;
+
+                        &.heroSubTitle {
+                            animation: heroSubTitle 1s linear 3.2s;
+                        }
                     }
 
-                    P {
+                    p.hero-p {
+                        opacity: 0;
                         font: 400 23px Anjoman;
                         text-align: justify;
-                        margin: 22px 0;
+                        margin: 122px 0 22px;
                     }
 
-                    .line {
-                        top: 0px;
+                    .line.heroSecondLine {
+                        top: -10px;
                         left: unset;
                         right: 70px;
                         width: unset;
-                        height: 97%;
+                        height: 0;
 
                         .dot {
                             top: unset;
@@ -558,11 +578,11 @@ section.about {
                             font-size: 60px;
                         }
 
-                        span {
+                        span.subtitle {
                             font-size: 22px;
                         }
 
-                        P {
+                        p.hero-p {
                             width: 150%;
                             font-size: 12px;
                             margin: 20px 0 60px;

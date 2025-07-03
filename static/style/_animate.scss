@@ -1,0 +1,39 @@
+@keyframes heroFirstLine {
+    0% {
+        left: 101%;
+    }
+
+    100% {
+        left: 30%;
+    }
+}
+
+@keyframes heroBox {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes heroMainTitle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes heroSubTitle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
