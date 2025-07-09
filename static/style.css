@@ -288,14 +288,13 @@ section.hero .herofull .heromain .hero-box .hero-text span.subtitle.heroSubTitle
   -webkit-animation: heroSubTitle 1s linear 3.2s;
           animation: heroSubTitle 1s linear 3.2s;
 }
-section.hero .herofull .heromain .hero-box .hero-text p.hero-p {
+section.hero .herofull .heromain .hero-box .hero-text .hero-p {
   opacity: 0;
   font: 400 23px Anjoman;
-  text-align: justify;
   margin: 122px 0 22px;
 }
 section.hero .herofull .heromain .hero-box .hero-text .line.heroSecondLine {
-  top: -10px;
+  top: -30px;
   left: unset;
   right: 70px;
   width: unset;
@@ -331,7 +330,7 @@ section.approach .appfull .appmain {
 }
 section.approach .appfull .appmain .app-text,
 section.approach .appfull .appmain .app-pic {
-  width: 48%;
+  width: 49%;
 }
 section.approach .appfull .appmain .app-text {
   position: relative;
@@ -339,7 +338,6 @@ section.approach .appfull .appmain .app-text {
 }
 section.approach .appfull .appmain .app-text p {
   font: 400 16px Anjoman;
-  text-align: justify;
 }
 section.approach .appfull .appmain .app-pic {
   background-color: green;
@@ -468,7 +466,6 @@ section.values .valfull .val-box .value h3 {
 section.values .valfull .val-box .value p {
   margin: 0;
   font: 300 16px Anjoman;
-  text-align: justify;
   line-height: 26px;
 }
 section.values .valfull .val-title {
@@ -481,12 +478,12 @@ section.values .valfull .val-title .empty-box {
   position: relative;
   width: 323px;
 }
-section.values .valfull .val-title .empty-box .line {
+section.values .valfull .val-title .empty-box .line.valuesFirstLine {
   width: 100%;
   top: 30px;
-  left: 24px;
+  left: 105%;
 }
-section.values .valfull .val-title .empty-box .line .dot {
+section.values .valfull .val-title .empty-box .line.valuesFirstLine .dot {
   top: -10px;
   right: unset;
   left: -2px;
@@ -502,16 +499,17 @@ section.projects .promain {
 section.projects .promain .pro-title {
   position: relative;
   padding: 90px 100px 42px 0;
+  overflow: hidden;
 }
 section.projects .promain .pro-title h1 {
   color: #3D3D3D;
 }
-section.projects .promain .pro-title .line {
-  top: 0;
+section.projects .promain .pro-title .line.projectsFirstLine {
+  top: -85%;
   right: 75px;
   height: 129px;
 }
-section.projects .promain .pro-title .line .dot {
+section.projects .promain .pro-title .line.projectsFirstLine .dot {
   bottom: -2px;
   left: -11px;
   width: 20px;
@@ -541,8 +539,7 @@ section.projects .promain .pro-each .pro-right h3 {
 }
 section.projects .promain .pro-each .pro-right p {
   margin: 0;
-  font: 300 14px Anjoman;
-  text-align: justify;
+  font: 300 16px Anjoman;
   color: #3D3D3D;
 }
 section.projects .promain .pro-each .pro-right .dot {
@@ -634,12 +631,12 @@ section.about .empty-box {
           flex-grow: 1;
   position: relative;
 }
-section.about .empty-box .line {
+section.about .empty-box .line.aboutFirstLine {
   top: 33px;
-  left: 20px;
+  left: 100%;
   width: 100%;
 }
-section.about .empty-box .line .dot {
+section.about .empty-box .line.aboutFirstLine .dot {
   top: -10px;
   left: -1px;
   width: 20px;
@@ -665,7 +662,6 @@ section.about .aboutMain .ab-right h1 {
 }
 section.about .aboutMain .ab-right p {
   font: 300 16px Anjoman;
-  text-align: justify;
   color: #E9E5D9;
   margin: 0 0 20px;
 }
@@ -717,7 +713,7 @@ section.about .aboutMain .ab-left img {
   }
   section.hero .herofull {
     bottom: -185px;
-    height: unset;
+    height: 310px;
   }
   section.hero .herofull .line {
     left: 15%;
@@ -728,32 +724,53 @@ section.about .aboutMain .ab-left img {
     width: 10px;
     height: 10px;
   }
+  section.hero .herofull .line.heroFirstLine {
+    -webkit-animation: unset;
+            animation: unset;
+  }
   section.hero .herofull .heromain {
     width: calc(100vw - 32px) !important;
   }
   section.hero .herofull .heromain .hero-box {
+    height: 100%;
     width: 240px;
+  }
+  section.hero .herofull .heromain .hero-box.heroBox {
+    -webkit-animation: unset;
+            animation: unset;
   }
   section.hero .herofull .heromain .hero-box .hero-text {
     overflow: visible;
     padding: 0 34px 0 30px;
   }
   section.hero .herofull .heromain .hero-box .hero-text h1.maintitle {
+    opacity: 1;
     font-size: 60px;
   }
+  section.hero .herofull .heromain .hero-box .hero-text h1.maintitle.heroMainTitle {
+    -webkit-animation: unset;
+            animation: unset;
+  }
   section.hero .herofull .heromain .hero-box .hero-text span.subtitle {
+    opacity: 1;
     font-size: 22px;
   }
+  section.hero .herofull .heromain .hero-box .hero-text span.subtitle.heroSubTitle {
+    -webkit-animation: unset;
+            animation: unset;
+  }
   section.hero .herofull .heromain .hero-box .hero-text p.hero-p {
+    opacity: 1;
     width: 150%;
     font-size: 12px;
-    margin: 20px 0 60px;
+    margin: 22px 0 60px;
   }
-  section.hero .herofull .heromain .hero-box .hero-text .line {
+  section.hero .herofull .heromain .hero-box .hero-text .line.heroSecondLine {
+    top: 0;
     right: 13px;
     height: 98%;
   }
-  section.hero .herofull .heromain .hero-box .hero-text .line .dot {
+  section.hero .herofull .heromain .hero-box .hero-text .line.heroSecondLine .dot {
     left: -6px;
     width: 10px;
     height: 10px;
@@ -866,12 +883,12 @@ section.about .aboutMain .ab-left img {
   section.values .valfull .val-title .empty-box {
     width: 47px;
   }
-  section.values .valfull .val-title .empty-box .line {
+  section.values .valfull .val-title .empty-box .line.valuesFirstLine {
     width: 100%;
     top: 15px;
-    left: 15px;
+    left: 10px;
   }
-  section.values .valfull .val-title .empty-box .line .dot {
+  section.values .valfull .val-title .empty-box .line.valuesFirstLine .dot {
     top: -6px;
     width: 10px;
     height: 10px;
@@ -883,11 +900,12 @@ section.about .aboutMain .ab-left img {
   section.projects .promain .pro-title {
     padding: 68px 40px 28px 0;
   }
-  section.projects .promain .pro-title .line {
+  section.projects .promain .pro-title .line.projectsFirstLine {
+    top: 0;
     right: 20px;
     height: 88px;
   }
-  section.projects .promain .pro-title .line .dot {
+  section.projects .promain .pro-title .line.projectsFirstLine .dot {
     bottom: -2px;
     left: -6px;
     width: 10px;
@@ -956,11 +974,11 @@ section.about .aboutMain .ab-left img {
   section.about {
     padding: 48px 0;
   }
-  section.about .empty-box .line {
+  section.about .empty-box .line.aboutFirstLine {
     top: 15px;
     left: 15px;
   }
-  section.about .empty-box .line .dot {
+  section.about .empty-box .line.aboutFirstLine .dot {
     top: -6px;
     left: -2px;
     width: 10px;

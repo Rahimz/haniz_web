@@ -42,6 +42,7 @@ section.hero {
             width: $wmain;
             height: 100%;
             margin: 0 auto;
+            // background-color: aqua;
 
             .hero-box {
                 height: 0;
@@ -79,15 +80,14 @@ section.hero {
                         }
                     }
 
-                    p.hero-p {
+                    .hero-p {
                         opacity: 0;
                         font: 400 23px Anjoman;
-                        text-align: justify;
                         margin: 122px 0 22px;
                     }
 
                     .line.heroSecondLine {
-                        top: -10px;
+                        top: -30px;
                         left: unset;
                         right: 70px;
                         width: unset;
@@ -126,7 +126,7 @@ section.approach {
 
             .app-text,
             .app-pic {
-                width: 48%;
+                width: 49%;
             }
 
             .app-text {
@@ -136,7 +136,7 @@ section.approach {
 
                 p {
                     font: 400 16px Anjoman;
-                    text-align: justify;
+                    ;
                 }
             }
 
@@ -290,7 +290,7 @@ section.values {
                 p {
                     margin: 0;
                     font: 300 16px Anjoman;
-                    text-align: justify;
+                    ;
                     line-height: 26px;
                 }
             }
@@ -304,10 +304,10 @@ section.values {
                 position: relative;
                 width: 323px;
 
-                .line {
+                .line.valuesFirstLine {
                     width: 100%;
                     top: 30px;
-                    left: 24px;
+                    left: 105%;
 
                     .dot {
                         top: -10px;
@@ -332,13 +332,15 @@ section.projects {
         .pro-title {
             position: relative;
             padding: 90px 100px 42px 0;
+            overflow: hidden;
+            // background-color: aqua;
 
             h1 {
                 color: $dark;
             }
 
-            .line {
-                top: 0;
+            .line.projectsFirstLine {
+                top: -85%;
                 right: 75px;
                 height: 129px;
 
@@ -370,8 +372,8 @@ section.projects {
 
                 p {
                     margin: 0;
-                    font: 300 14px Anjoman;
-                    text-align: justify;
+                    font: 300 16px Anjoman;
+                    ;
                     color: $dark;
                 }
 
@@ -465,9 +467,9 @@ section.about {
         flex-grow: 1;
         position: relative;
 
-        .line {
+        .line.aboutFirstLine {
             top: 33px;
-            left: 20px;
+            left: 100%;
             width: 100%;
 
             .dot {
@@ -495,7 +497,7 @@ section.about {
 
             p {
                 font: 300 16px Anjoman;
-                text-align: justify;
+                ;
                 color: $light;
                 margin: 0 0 20px;
             }
@@ -551,7 +553,7 @@ section.about {
 
         .herofull {
             bottom: -185px;
-            height: unset;
+            height: 310px;
 
             .line {
                 left: 15%;
@@ -562,33 +564,54 @@ section.about {
                     width: 10px;
                     height: 10px;
                 }
+
+                &.heroFirstLine {
+                    animation: unset;
+                }
             }
 
             .heromain {
                 width: calc(100vw - 32px) !important;
 
                 .hero-box {
+                    height: 100%;
                     width: 240px;
+
+                    &.heroBox {
+                        animation: unset;
+                    }
 
                     .hero-text {
                         overflow: visible;
                         padding: 0 34px 0 30px;
 
                         h1.maintitle {
+                            opacity: 1;
                             font-size: 60px;
+
+                            &.heroMainTitle {
+                                animation: unset;
+                            }
                         }
 
                         span.subtitle {
+                            opacity: 1;
                             font-size: 22px;
+
+                            &.heroSubTitle {
+                                animation: unset;
+                            }
                         }
 
                         p.hero-p {
+                            opacity: 1;
                             width: 150%;
                             font-size: 12px;
-                            margin: 20px 0 60px;
+                            margin: 22px 0 60px;
                         }
 
-                        .line {
+                        .line.heroSecondLine {
+                            top: 0;
                             right: 13px;
                             height: 98%;
 
@@ -744,10 +767,10 @@ section.about {
                 .empty-box {
                     width: 47px;
 
-                    .line {
+                    .line.valuesFirstLine {
                         width: 100%;
                         top: 15px;
-                        left: 15px;
+                        left: 10px;
 
                         .dot {
                             top: -6px;
@@ -769,7 +792,8 @@ section.about {
             .pro-title {
                 padding: 68px 40px 28px 0;
 
-                .line {
+                .line.projectsFirstLine {
+                    top: 0;
                     right: 20px;
                     height: 88px;
 
@@ -851,7 +875,7 @@ section.about {
         padding: 48px 0;
 
         .empty-box {
-            .line {
+            .line.aboutFirstLine {
                 top: 15px;
                 left: 15px;
 
