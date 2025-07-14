@@ -1,0 +1,271 @@
+@media screen and (max-width: 768px) {
+    section.hero {
+        height: 100%;
+
+        .herofull {
+            bottom: -185px;
+            height: 310px;
+
+            .line {
+                left: 15%;
+                width: 85%;
+
+                &.heroFirstLine {
+                    animation: unset;
+                }
+            }
+
+            .heromain {
+                .hero-box {
+                    width: 240px;
+                    height: 100%;
+
+                    &.heroBox {
+                        animation: unset;
+                    }
+
+                    .hero-text {
+                        padding: 0 34px 0 30px;
+                        overflow: visible;
+
+                        h1.maintitle {
+                            opacity: 1;
+                            font-size: 60px;
+
+                            &.heroMainTitle {
+                                animation: unset;
+                            }
+                        }
+
+                        span.subtitle {
+                            opacity: 1;
+                            font-size: 22px;
+
+                            &.heroSubTitle {
+                                animation: unset;
+                            }
+                        }
+
+                        p.hero-p {
+                            opacity: 1;
+                            width: 150%;
+                            font-size: 12px;
+                            margin: 22px 0 60px;
+                        }
+
+                        .line.heroSecondLine {
+                            top: 0;
+                            right: 13px;
+                            height: 98%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // commented style are applied in _tablet.scss
+    section.approach {
+        padding: 225px 0 35px;
+
+        .appfull {
+            // height: unset;
+
+            .appmain {
+                padding: 0 35px 0 20px;
+                // flex-direction: column;
+
+                .app-text,
+                .app-pic {
+                    // width: 100% !important;
+                }
+
+                .app-text {
+                    // padding: 0 0 30px 0;
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+
+                .app-pic {
+                    // position: relative;
+                    height: 50vw;
+
+                    img {
+                        // width: 100%;
+                    }
+                }
+            }
+
+            &.appfull:nth-child(odd) {
+                .lineZireAks {
+                    width: calc(93%);
+                }
+
+                .lineTitre {
+                    width: calc(100% + 18px);
+                    // top: 12px;
+                }
+            }
+
+            &.appfull:nth-child(even) {
+                .lineTitre {
+                    // display: inline-block;
+                    width: calc(100% + 18px);
+                    // top: 12px;
+                }
+
+                .lineRooyeAksDesk {
+                    // display: none;
+                }
+
+                .lineRooyeAksMob {
+                    // display: inline-block;
+                    width: calc(100% + 240px);
+                    // top: 0;
+                    right: -200px;
+                    // z-index: 50;
+
+                    .dot {
+                        // left: -2px;
+                    }
+                }
+
+                .app-text {
+                    // margin-top: 0;
+                }
+            }
+        }
+    }
+
+    section.values {
+        .valfull {
+            .val-box {
+                .empty-box {
+                    width: 20% !important;
+
+                    .line {
+                        top: 14px;
+                        left: 12px;
+                    }
+                }
+
+                .value {
+                    width: 65%;
+
+                    h3 {
+                        margin: 0 0 10px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .val-title {
+                padding: 35px 0;
+
+                .empty-box {
+                    width: 10%;
+
+                    .line.valuesFirstLine {
+                        top: 15px;
+                        left: 10px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    // commented style are applied in _tablet.scss
+    section.projects {
+        .promain {
+            .pro-title {
+                padding: 65px 20px 28px 0;
+
+                // .line.projectsFirstLine {
+                //     top: 0;
+                //     right: 8px;
+                //     height: 85px;
+                // }
+            }
+
+            .pro-each {
+                // height: unset;
+                // flex-direction: column;
+                margin: 0 0 60px 0;
+
+                // .pro-right {
+                //     width: 80%;
+                //     margin: 0 auto;
+                // }
+
+                .pro-left {
+                    // width: 100%;
+                    height: 45vw;
+                    // margin-top: 30px;
+
+                    // .pro-pic {
+                    //     height: 100%;
+                    // }
+
+                    // .line {
+                    //     display: none;
+                    // }
+
+                    // .temp-back {
+                    //     width: 100%;
+                    // }
+                }
+
+                &:last-child {
+                    margin: 0 0 60px 0;
+
+                    // .pro-right {
+                    //     width: 70%;
+                    // }
+                }
+            }
+        }
+    }
+
+    section.about {
+        padding: 44px 0 50px;
+
+        .empty-box {
+            .line.aboutFirstLine {
+                top: 15px;
+                left: 1px !important;
+            }
+        }
+
+        .aboutMain {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // background-color: blueviolet;
+
+            .ab-right {
+                width: 100%;
+                margin-bottom: 128px;
+
+                h3 {
+                    margin: 30px 0 10px;
+                }
+
+                .ab-contact {
+                    justify-content: space-between;
+                    align-items: flex-end;
+                }
+            }
+
+            .ab-left {
+                width: 35%;
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+@media screen and (max-width: 1024px) {
+    section.hero {
+        .herofull {
+            .line {
+                width: 85%;
+
+                &.heroFirstLine {
+                    animation: unset;
+                    animation: heroFirstLineTablet 1.5s;
+                }
+            }
+        }
+    }
+
+    section.approach {
+        padding: 200px 0 35px;
+
+        .appfull {
+            height: unset;
+
+            .appmain {
+                padding: 0 78px 0 50px;
+                flex-direction: column;
+
+                .app-text,
+                .app-pic {
+                    width: 100% !important;
+                }
+
+                .app-text {
+                    padding: 0 0 30px 0;
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .app-pic {
+                    position: relative;
+                    height: 30vw;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.appfull:nth-child(odd) {
+                .lineZireAks {
+                    width: calc(85%);
+                }
+
+                .lineTitre {
+                    width: calc(100% + 55px);
+                    top: 12px;
+                }
+            }
+
+            &.appfull:nth-child(even) {
+                .lineTitre {
+                    display: inline-block;
+                    width: calc(100% + 55px);
+                    top: 12px;
+                }
+
+                .lineRooyeAksDesk {
+                    display: none;
+                }
+
+                .lineRooyeAksMob {
+                    display: inline-block;
+                    width: calc(100% + 500px);
+                    top: 0;
+                    right: -400px;
+                    z-index: 50;
+
+                    .dot {
+                        left: -2px;
+                    }
+                }
+
+                .app-text {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    section.projects {
+        .promain {
+            .pro-title {
+                padding: 53px 30px 28px 0;
+
+                .line.projectsFirstLine {
+                    top: 0;
+                    right: 8px;
+                    height: 85px;
+                }
+            }
+
+            .pro-each {
+                height: unset;
+                flex-direction: column;
+                margin: 0 0 80px 0;
+
+                .pro-right {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                .pro-left {
+                    width: 100%;
+                    height: 37vw;
+                    margin-top: 30px;
+
+                    .pro-pic {
+                        height: 100%;
+                    }
+
+                    .line {
+                        display: none;
+                    }
+
+                    .temp-back {
+                        width: 100%;
+                    }
+                }
+
+                &:last-child {
+                    margin: 0 0 100px 0;
+
+                    .pro-right {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}

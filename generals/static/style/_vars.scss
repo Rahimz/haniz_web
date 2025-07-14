@@ -2,7 +2,11 @@
 
 // SIZEs
 $wfull: 100%;
-$wmain: 1273px !important;
+$w-desk: 1274px !important; // > 1440
+$w-lap: 906px !important; // 1440 > 1024
+$w-tab: 592px !important; // 1024 > 768
+$w-mob: 80% !important; // 768 >
+
 $wmob: 100% !important;
 
 // COLORs

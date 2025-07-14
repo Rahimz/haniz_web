@@ -2,11 +2,6 @@
 @import "comm";
 @import "animate";
 
-section {
-    position: relative;
-    padding: 0;
-}
-
 section.hero,
 section.approach {
     color: $dark;
@@ -14,7 +9,7 @@ section.approach {
 
 section.hero {
     min-height: 100vh;
-    background: url('images/hero.jpg') no-repeat;
+    background: url('images/hero.jpg');
     @include ccbg;
 
     .herofull {
@@ -27,10 +22,7 @@ section.hero {
             width: 70%;
 
             .dot {
-                top: -11px;
                 left: -2px;
-                width: 20px;
-                height: 20px;
             }
 
             &.heroFirstLine {
@@ -39,10 +31,8 @@ section.hero {
         }
 
         .heromain {
-            width: $wmain;
             height: 100%;
             margin: 0 auto;
-            // background-color: aqua;
 
             .hero-box {
                 height: 0;
@@ -96,9 +86,6 @@ section.hero {
                         .dot {
                             top: unset;
                             bottom: -2px;
-                            left: -11px;
-                            width: 20px;
-                            height: 20px;
                         }
                     }
                 }
@@ -108,72 +95,71 @@ section.hero {
 }
 
 section.approach {
-    margin: 212px 0 0;
-    padding: 64px 0;
+    padding: 275px 0 64px;
 
     .appfull {
         position: relative;
         height: 455px;
-        margin-bottom: 66px;
+        margin-bottom: 65px;
+        display: flex;
+        justify-content: space-between;
+
+        .emptybox {
+            position: relative;
+            flex-grow: 1;
+            // background-color: rgba($color: blue, $alpha: 0.3);
+        }
 
         .appmain {
-            width: $wmain;
+            position: relative;
             height: 100%;
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
-            // background-color: brown;
 
             .app-text,
             .app-pic {
-                width: 49%;
+                width: calc(50% - 10px);
             }
 
             .app-text {
                 position: relative;
                 padding: 0 104px 0 80px;
-                // background-color: yellow;
 
                 p {
                     font: 400 16px Anjoman;
-                    ;
                 }
             }
 
             .app-pic {
-                background-color: green;
+
                 @include ccbg;
 
                 img {
-                    width: 600px;
+                    width: 100%;
                 }
             }
         }
 
-        .line2 {
-            width: calc((100vw - 1120px)/2);
-            top: 22px;
-            right: 0;
-
-            .dot {
-                top: -11px;
-                left: -2px;
-                width: 20px;
-                height: 20px;
-            }
-        }
-
         &.appfull:nth-child(odd) {
-            .line {
-                width: 56%;
+            .lineZireAks {
+                width: calc(50% + 90px);
                 bottom: 0;
                 left: 0;
+                z-index: 50;
 
                 .dot {
-                    top: -11px;
                     right: -2px;
-                    width: 20px;
-                    height: 20px;
+                }
+            }
+
+            .lineTitre {
+                width: calc(100% + 80px);
+                top: 22px;
+                right: 0;
+
+                .dot {
+                    left: -2px;
                 }
             }
 
@@ -186,20 +172,29 @@ section.approach {
         &.appfull:nth-child(even) {
             direction: ltr;
 
-            .line {
-                width: 56%;
-                top: 0;
+            .lineTitre {
+                display: none;
+                // width: calc(100% + 80px);
+                // top: 22px;
                 right: 0;
 
                 .dot {
-                    top: -11px;
                     left: -2px;
-                    width: 20px;
-                    height: 20px;
                 }
             }
 
-            .line2 {
+            .lineRooyeAksDesk {
+                width: calc(50% + 90px);
+                top: 0;
+                right: 0;
+                z-index: 50;
+
+                .dot {
+                    left: -2px;
+                }
+            }
+
+            .lineRooyeAksMob {
                 display: none;
             }
 
@@ -217,16 +212,15 @@ section.approach {
 }
 
 section.values {
-    background: url('images/values.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: url('images/values.jpg');
+    @include ccbg;
 
     .valfull {
         position: relative;
-        min-height: 100vh;
+        // min-height: 100vh;
         background-color: rgba($color: $dark, $alpha: 0.9);
         color: $light;
-        padding-bottom: 115px;
+        padding-bottom: 85px;
 
         .line {
             width: 50%;
@@ -234,10 +228,7 @@ section.values {
             left: 0;
 
             .dot {
-                top: -10px;
                 right: -2px;
-                width: 20px;
-                height: 20px;
             }
         }
 
@@ -247,18 +238,14 @@ section.values {
             color: $light;
 
             &:nth-child(odd) {
-                padding-left: 384px;
-
                 .empty-box {
-                    width: 597px;
+                    width: 30%;
                 }
             }
 
             &:nth-child(even) {
-                padding-left: 604px;
-
                 .empty-box {
-                    width: 390px;
+                    width: 20%;
                 }
             }
 
@@ -271,17 +258,14 @@ section.values {
                     left: 24px;
 
                     .dot {
-                        top: -6px;
                         right: unset;
                         left: -2px;
-                        width: 10px;
-                        height: 10px;
                     }
                 }
             }
 
             .value {
-                width: 50%;
+                width: 45%;
 
                 h3 {
                     margin: 0 0 20px;
@@ -298,23 +282,20 @@ section.values {
 
         .val-title {
             display: flex;
-            padding: 76px 0 85px;
+            padding: 80px 0;
 
             .empty-box {
                 position: relative;
-                width: 323px;
+                width: 15%;
 
                 .line.valuesFirstLine {
                     width: 100%;
                     top: 30px;
-                    left: 105%;
+                    left: 102%;
 
                     .dot {
-                        top: -10px;
                         right: unset;
                         left: -2px;
-                        width: 20px;
-                        height: 20px;
                     }
                 }
             }
@@ -325,7 +306,6 @@ section.values {
 
 section.projects {
     .promain {
-        width: $wmain;
         height: 100%;
         margin: 0 auto;
 
@@ -333,7 +313,6 @@ section.projects {
             position: relative;
             padding: 90px 100px 42px 0;
             overflow: hidden;
-            // background-color: aqua;
 
             h1 {
                 color: $dark;
@@ -346,9 +325,6 @@ section.projects {
 
                 .dot {
                     bottom: -2px;
-                    left: -11px;
-                    width: 20px;
-                    height: 20px;
                 }
             }
         }
@@ -359,11 +335,12 @@ section.projects {
             justify-content: space-between;
             align-items: center;
             margin: 0 0 64px 0;
+            // background-color: rgba($color: green, $alpha: .4);
 
             .pro-right {
                 position: relative;
-                width: 392px;
-                margin-left: 88px;
+                width: 30%;
+                // background-color: rgba($color: red, $alpha: 0.3);
 
                 h3 {
                     margin: 0 0 30px 0;
@@ -373,28 +350,27 @@ section.projects {
                 p {
                     margin: 0;
                     font: 300 16px Anjoman;
-                    ;
                     color: $dark;
                 }
 
                 .dot {
                     top: 20px;
                     right: -20px;
-                    width: 10px;
-                    height: 10px;
                 }
             }
 
             .pro-left {
                 position: relative;
-                width: 773px;
+                width: 60%;
+                height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                // background-color: rgba($color: red, $alpha: 0.3);
 
                 .pro-pic {
-                    width: 525px;
-                    height: 388px;
+                    height: 100%;
+                    aspect-ratio: 1.4 / 1;
                     border-radius: 10px;
                     background-color: aquamarine;
                     background-repeat: no-repeat;
@@ -410,10 +386,6 @@ section.projects {
                     z-index: 2;
 
                     .dot {
-                        top: -9px;
-                        width: 18px;
-                        height: 18px;
-
                         &:first-child {
                             right: 0;
                         }
@@ -429,8 +401,8 @@ section.projects {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 713px;
-                    height: 331px;
+                    width: 90%;
+                    aspect-ratio: 2.2 / 1;
                     border-radius: 10px;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -446,12 +418,11 @@ section.projects {
             }
 
             &:last-child {
-                height: 317px;
                 align-items: flex-start;
-                margin: 0;
+                margin: 0 0 -100px;
 
                 .pro-right {
-                    width: 600px;
+                    width: 55%;
                 }
             }
         }
@@ -460,7 +431,7 @@ section.projects {
 
 section.about {
     display: flex;
-    padding: 82px 0 130px;
+    padding: 80px 0 130px;
     background-color: $dark;
 
     .empty-box {
@@ -468,43 +439,44 @@ section.about {
         position: relative;
 
         .line.aboutFirstLine {
-            top: 33px;
+            top: 35px;
             left: 100%;
             width: 100%;
 
             .dot {
-                top: -10px;
-                left: -1px;
-                width: 20px;
-                height: 20px;
+                left: 0px;
             }
         }
     }
 
     .aboutMain {
+        padding: 0 20px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        // background-color: antiquewhite;
+        // background-color: green;
 
         .ab-right {
-            width: 704px;
+            width: 55%;
 
-            h1 {
-                margin: 0 0 30px;
+            h1,
+            p,
+            h3,
+            h6 {
                 color: $light;
             }
 
+            h1 {
+                margin: 0 0 38px;
+            }
+
             p {
-                font: 300 16px Anjoman;
-                ;
-                color: $light;
                 margin: 0 0 20px;
+                font: 300 16px Anjoman;
             }
 
             h3 {
                 margin: 80px 0 20px;
-                color: $light;
             }
 
             .ab-contact {
@@ -519,7 +491,6 @@ section.about {
                     h6 {
                         margin: 0;
                         font: 300 16px Anjoman;
-                        color: $light;
                     }
                 }
 
@@ -532,409 +503,17 @@ section.about {
         }
 
         .ab-left {
+            width: 22%;
             color: $light;
 
             img {
-                width: 285px;
-                height: 95px;
-            }
-        }
-    }
-}
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-    section.hero {
-        height: 100%;
-
-        .herofull {
-            bottom: -185px;
-            height: 310px;
-
-            .line {
-                left: 15%;
-                width: 85%;
-
-                .dot {
-                    top: -6px;
-                    width: 10px;
-                    height: 10px;
-                }
-
-                &.heroFirstLine {
-                    animation: unset;
-                }
-            }
-
-            .heromain {
-                width: calc(100vw - 32px) !important;
-
-                .hero-box {
-                    height: 100%;
-                    width: 240px;
-
-                    &.heroBox {
-                        animation: unset;
-                    }
-
-                    .hero-text {
-                        overflow: visible;
-                        padding: 0 34px 0 30px;
-
-                        h1.maintitle {
-                            opacity: 1;
-                            font-size: 60px;
-
-                            &.heroMainTitle {
-                                animation: unset;
-                            }
-                        }
-
-                        span.subtitle {
-                            opacity: 1;
-                            font-size: 22px;
-
-                            &.heroSubTitle {
-                                animation: unset;
-                            }
-                        }
-
-                        p.hero-p {
-                            opacity: 1;
-                            width: 150%;
-                            font-size: 12px;
-                            margin: 22px 0 60px;
-                        }
-
-                        .line.heroSecondLine {
-                            top: 0;
-                            right: 13px;
-                            height: 98%;
-
-                            .dot {
-                                left: -6px;
-                                width: 10px;
-                                height: 10px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    section.approach {
-        margin: 190px 0 0;
-        padding: 35px 0 0;
-
-        .appfull {
-            height: unset;
-            margin-bottom: 60px;
-
-            .appmain {
-                width: $wmob;
-                min-height: 100%;
-                flex-direction: column;
-                // justify-content: flex-start;
-                align-items: center;
-
-                .app-text,
-                .app-pic {
-                    width: 265px !important;
-                }
-
-                .app-text {
-                    position: relative;
-                    padding: 0 0 30px 0;
-
-                    p {
-                        font-size: 12px;
-                    }
-                }
-
-                .app-pic {
-                    height: 222px;
-
-                    img {
-                        width: 300px;
-                    }
-                }
-            }
-
-            .line2 {
-                width: 33px !important;
-                top: 12px;
-
-                .dot {
-                    top: -6px;
-                    left: -2px;
-                    width: 10px;
-                    height: 10px;
-                }
-            }
-
-            &.appfull:nth-child(odd) {
-                .line {
-                    width: 94%;
-
-                    .dot {
-                        top: -6px;
-                        width: 10px;
-                        height: 10px;
-                    }
-                }
-            }
-
-            &.appfull:nth-child(even) {
-                direction: rtl;
-
-                .line {
-                    width: 94%;
-                    top: unset;
-                    bottom: 222px;
-
-                    .dot {
-                        top: -6px;
-                        width: 10px;
-                        height: 10px;
-                    }
-                }
-
-                .line2 {
-                    display: inline-block;
-                }
-
-                .app-text {
-                    margin-top: 0;
-                }
-
-            }
-        }
-    }
-
-    section.values {
-        .valfull {
-            padding-bottom: 63px;
-
-            .line {
-                .dot {
-                    top: -6px;
-                    width: 10px;
-                    height: 10px;
-                }
-            }
-
-            .val-box {
-
-                &:nth-child(odd),
-                &:nth-child(even) {
-                    padding-left: 48px;
-
-                    .empty-box {
-                        width: 91px;
-                    }
-                }
-
-                .empty-box {
-                    .line {
-                        width: 100%;
-                        top: 12px;
-                        left: 10px;
-                    }
-                }
-
-                .value {
-                    width: 100%;
-
-                    h3 {
-                        margin: 0 0 10px;
-                    }
-
-                    p {
-                        font-size: 12px;
-                        line-height: 20px;
-                    }
-                }
-            }
-
-            .val-title {
-                padding: 38px 0 30px;
-
-                .empty-box {
-                    width: 47px;
-
-                    .line.valuesFirstLine {
-                        width: 100%;
-                        top: 15px;
-                        left: 10px;
-
-                        .dot {
-                            top: -6px;
-                            width: 10px;
-                            height: 10px;
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-
-    section.projects {
-        .promain {
-            width: $wmob;
-            margin: 0 auto;
-
-            .pro-title {
-                padding: 68px 40px 28px 0;
-
-                .line.projectsFirstLine {
-                    top: 0;
-                    right: 20px;
-                    height: 88px;
-
-                    .dot {
-                        bottom: -2px;
-                        left: -6px;
-                        width: 10px;
-                        height: 10px;
-                    }
-                }
-            }
-
-            .pro-each {
-                height: unset;
-                min-height: 50px;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                margin: 0 0 60px 0;
-                padding: 0 16px;
-
-                .pro-right {
-                    width: 250px;
-                    margin: 0 auto;
-
-                    h3 {
-                        margin: 0 0 15px 0;
-                    }
-
-                    p {
-                        font-size: 12pxn;
-                    }
-
-                    .dot {
-                        top: 10px;
-                    }
-                }
-
-                .pro-left {
-                    width: 100%;
-                    margin-top: 30px;
-
-                    .pro-pic {
-                        width: 265px;
-                        height: 194px;
-                    }
-
-                    .line {
-                        display: none;
-                    }
-
-                    .temp-back {
-                        width: 100%;
-                        height: 165px;
-
-                        .temp-over {
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 10px;
-                            background-color: rgba($color: #444444, $alpha: 0.8);
-                        }
-                    }
-                }
-
-                &:last-child {
-                    height: unset;
-                    align-items: flex-start;
-                    margin: 0 0 60px 0;
-
-                    .pro-right {
-                        width: 250px;
-                    }
-                }
-            }
-        }
-    }
-
-    section.about {
-        padding: 48px 0;
-
-        .empty-box {
-            .line.aboutFirstLine {
-                top: 15px;
-                left: 15px;
-
-                .dot {
-                    top: -6px;
-                    left: -2px;
-                    width: 10px;
-                    height: 10px;
-                }
-            }
-        }
-
-        .aboutMain {
-            width: 265px !important;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .ab-right {
                 width: 100%;
-                margin-bottom: 128px;
-
-                h1 {
-                    margin: 0 0 30px;
-                }
-
-                p {
-                    font-size: 12px;
-                    margin: 0 0 12px;
-                }
-
-                h3 {
-                    margin: 30px 0 10px;
-                }
-
-                .ab-contact {
-                    justify-content: space-between;
-                    align-items: flex-end;
-
-                    div {
-                        h6 {
-                            margin: 0 10px 0 0;
-                            font-size: 12px;
-                        }
-                    }
-
-                    img {
-                        width: 30px;
-                        height: 30px;
-                    }
-                }
-            }
-
-            .ab-left {
-                img {
-                    width: 143px;
-                    height: 48px;
-                }
             }
         }
     }
 }
+
+
+@import "laptop";
+@import "tablet";
+@import "mobile";

@@ -35,8 +35,13 @@ body {
     background-color: $light;
 }
 
-main {
+.base {
     width: $wfull;
+}
+
+section {
+    position: relative;
+    padding: 0;
     // background-color: yellow;
 }
 
@@ -46,18 +51,15 @@ main {
 }
 
 .wmain {
-    width: $wmain;
-    height: 100%;
+    width: $w-desk;
+    // background-color: yellow;
+    // height: 100%;
     // background-color: rgba($color: red, $alpha: 0.3);
 }
 
-
-
-
-
-// ------------------------------ //
 .line,
-.line2 {
+.line2,
+.line3 {
     position: absolute;
 
     &.h-line {
@@ -96,13 +98,87 @@ main {
     &.d-dot {
         background-color: $dark;
     }
+
+    &.dot1 {
+        width: 20px;
+        height: 20px;
+
+        &.dotH {
+            top: -11px;
+        }
+
+        &.dotV {
+            left: -11px !important;
+        }
+    }
+
+    &.dot2 {
+        width: 10px;
+        height: 10px;
+
+        &.dotH {
+            top: -6px;
+        }
+    }
 }
 
 
 
+@media screen and (max-width: 1440px) {
+    .wmain {
+        width: $w-lap;
+    }
 
+    .dot {
+        &.dot1 {
+            width: 15px;
+            height: 15px;
+
+            &.dotH {
+                top: -8px;
+            }
+
+            &.dotV {
+                left: -8px !important;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wmain {
+        width: $w-tab;
+    }
+}
 
 @media screen and (max-width: 768px) {
+    .wmain {
+        width: $w-mob;
+    }
+
+    .dot {
+        &.dot1 {
+            width: 10px;
+            height: 10px;
+
+            &.dotH {
+                top: -6px;
+            }
+
+            &.dotV {
+                left: -6px !important;
+            }
+        }
+    }
+
     h1 {
         font-size: 20px;
     }

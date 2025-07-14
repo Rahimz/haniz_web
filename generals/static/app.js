@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // not in mobile devices 
     var width = window.innerWidth;
-    if (width > 425) {
+    if (width > 768) {
         // for first animations (whithour scrolling)
         document.getElementById('heroFirstLine').classList.add('heroFirstLine');
         document.getElementById('heroBox').classList.add('heroBox');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 end: '+=400',
                 // markers: true,
             },
-            left: 24,
+            left: 20,
         });
 
         gsap.to('.projectsFirstLine', {
@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         gsap.to('.aboutFirstLine', {
             scrollTrigger: {
                 trigger: '.about',
-                start: 'top 80%',
+                start: 'top 85%',
                 end: '+=400',
                 // markers: true,
             },
-            left: 20,
+            left: 1,
         });
     }
 });

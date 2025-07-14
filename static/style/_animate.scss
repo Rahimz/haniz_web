@@ -8,6 +8,16 @@
     }
 }
 
+@keyframes heroFirstLineTablet {
+    0% {
+        left: 101%;
+    }
+
+    100% {
+        left: 15%;
+    }
+}
+
 @keyframes heroBox {
     0% {
         height: 0;
