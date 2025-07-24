@@ -257,15 +257,78 @@
 				</p>
 			</div>
 			<div class="pro-left">
-				<div class="line h-line o-line">
-					<div class="dot d-dot dot1 dotH"></div>
-					<div class="dot d-dot dot1 dotH"></div>
+				<div class="line h-line o-line buttons">
+					<button id="next">
+						<div class="dot d-dot dot1 dotH"></div>
+					</button>
+					<button id="prev">
+						<div class="dot d-dot dot1 dotH"></div>
+					</button>
 				</div>
 
-				<div class="temp-back" style="background: url('{% static 'images/proj1-2.jpg' %}');">
-					<div class="temp-over"></div>
+				<div class="slider slider0">
+					<div class="slide">
+						<img src="{% static 'slides/6.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/1.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/2.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/3.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/4.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/5.jpg' %}" alt="">
+					</div>
 				</div>
-				<div class="pro-pic" style="background-image: url('{% static 'images/proj1-2.jpg' %}');"></div>
+
+				<div class="slider slider1">
+					<div class="slide">
+						<img src="{% static 'slides/1.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/2.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/3.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/4.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/5.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/6.jpg' %}" alt="">
+					</div>
+				</div>
+
+				<div class="slider slider2">
+					<div class="slide">
+						<img src="{% static 'slides/2.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/3.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/4.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/5.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/6.jpg' %}" alt="">
+					</div>
+					<div class="slide">
+						<img src="{% static 'slides/1.jpg' %}" alt="">
+					</div>
+				</div>
+				<!-- <div class="pro-pic" style="background-image: url('{% static 'images/proj1-2.jpg' %}');"></div> -->
 			</div>
 		</div>
 		<div class="wfull pro-each">
@@ -284,14 +347,9 @@
 			</div>
 			<div class="pro-left">
 				<div class="line h-line o-line">
-					<div class="dot d-dot dot1 dotH"></div>
-					<div class="dot d-dot dot1 dotH"></div>
+					<!-- <div class="dot d-dot dot1 dotH"></div>
+					<div class="dot d-dot dot1 dotH"></div> -->
 				</div>
-
-				<div class="temp-back" style="background: url('{% static 'images/proj2-2.jpg' %}');">
-					<div class="temp-over"></div>
-				</div>				
-				<div class="pro-pic" style="background-image: url('{% static 'images/proj2-2.jpg' %}');"></div>
 			</div>
 		</div>
 		<div class="wfull pro-each">
@@ -309,14 +367,9 @@
 			</div>
 			<div class="pro-left">
 				<div class="line h-line o-line">
-					<div class="dot d-dot dot1 dotH"></div>
-					<div class="dot d-dot dot1 dotH"></div>
+					<!-- <div class="dot d-dot dot1 dotH"></div>
+					<div class="dot d-dot dot1 dotH"></div> -->
 				</div>
-
-				<div class="temp-back" style="background: url('{% static 'images/proj3-2.jpg' %}');">
-					<div class="temp-over"></div>
-				</div>
-				<div class="pro-pic" style="background-image: url('{% static 'images/proj3-2.jpg' %}');"></div>
 			</div>
 		</div>
 		<div class="wfull pro-each">
@@ -396,4 +449,5 @@
 	<script type="text/javascript" src="{% static 'GSAP/ScrollTrigger.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'gsap.js' %}"></script>
 	<script type="text/javascript" src="{% static 'app.js' %}"></script>
+	<script type="text/javascript" src="{% static 'slider.js' %}"></script>
 {% endblock script %}
