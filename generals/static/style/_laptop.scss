@@ -118,7 +118,6 @@
             .pro-each {
                 height: 280px;
                 margin: 0 0 20px 0;
-                // background-color: rgba($color: rgb(26, 112, 241), $alpha: .4);
 
                 .pro-right {
                     width: 38%;
@@ -139,8 +138,12 @@
                 .pro-left {
                     width: 55%;
 
-                    .pro-pic {
-                        height: 90%;
+                    .slider0 {
+                        left: 25px;
+                    }
+
+                    .slider2 {
+                        right: 25px;
                     }
                 }
 
