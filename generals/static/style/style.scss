@@ -380,6 +380,15 @@ section.projects {
                         outline: none;
                         cursor: pointer;
 
+                        .dot {
+                            background-color: $dark;
+                            transition: 0.3s;
+
+                            &:hover {
+                                background-color: #7a7979;
+                            }
+                        }
+
                         &:first-child .dot {
                             right: 0;
                         }
@@ -390,7 +399,9 @@ section.projects {
                     }
                 }
 
-                .slider {
+                .slider-a,
+                .slider-b,
+                .slider-c {
                     position: absolute;
                     overflow: hidden;
                     border-radius: 8px;
